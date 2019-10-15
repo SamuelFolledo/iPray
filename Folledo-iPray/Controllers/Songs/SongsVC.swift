@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  SongsVC.swift
 //  Folledo-iPray
 //
 //  Created by Macbook Pro 15 on 10/15/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class SongsVC: UIViewController {
 
 //MARK: Properties
     
@@ -29,4 +29,3 @@ class ViewController: UIViewController {
 //MARK: Helpers
 
 }
-

@@ -10,11 +10,17 @@
 		3343CA3B2356592C005EC399 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3343CA3A2356592C005EC399 /* AppDelegate.swift */; };
 		3343CA3D2356592C005EC399 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3343CA3C2356592C005EC399 /* SceneDelegate.swift */; };
 		3343CA3F2356592C005EC399 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3343CA3E2356592C005EC399 /* ViewController.swift */; };
-		3343CA422356592C005EC399 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3343CA402356592C005EC399 /* Main.storyboard */; };
+		3343CA422356592C005EC399 /* Songs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3343CA402356592C005EC399 /* Songs.storyboard */; };
 		3343CA442356592D005EC399 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3343CA432356592D005EC399 /* Assets.xcassets */; };
 		3343CA472356592D005EC399 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3343CA452356592D005EC399 /* LaunchScreen.storyboard */; };
 		3343CA522356592D005EC399 /* Folledo_iPrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3343CA512356592D005EC399 /* Folledo_iPrayTests.swift */; };
 		3343CA5D2356592D005EC399 /* Folledo_iPrayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3343CA5C2356592D005EC399 /* Folledo_iPrayUITests.swift */; };
+		3343CA6C23565A5F005EC399 /* Songs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3343CA6B23565A5F005EC399 /* Songs.swift */; };
+		3343CA7023565B68005EC399 /* SongsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3343CA6F23565B68005EC399 /* SongsVC.swift */; };
+		3343CA7223565B90005EC399 /* PrayerRequestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3343CA7123565B90005EC399 /* PrayerRequestVC.swift */; };
+		3343CA7423565BA0005EC399 /* PrayerTimerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3343CA7323565BA0005EC399 /* PrayerTimerVC.swift */; };
+		3343CA7623565E07005EC399 /* PrayerRequest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3343CA7523565E07005EC399 /* PrayerRequest.storyboard */; };
+		3343CA7823565E18005EC399 /* PrayerTimer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3343CA7723565E18005EC399 /* PrayerTimer.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +45,7 @@
 		3343CA3A2356592C005EC399 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3343CA3C2356592C005EC399 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		3343CA3E2356592C005EC399 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3343CA412356592C005EC399 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3343CA412356592C005EC399 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Songs.storyboard; sourceTree = "<group>"; };
 		3343CA432356592D005EC399 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3343CA462356592D005EC399 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3343CA482356592D005EC399 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +55,12 @@
 		3343CA582356592D005EC399 /* Folledo-iPrayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Folledo-iPrayUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3343CA5C2356592D005EC399 /* Folledo_iPrayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Folledo_iPrayUITests.swift; sourceTree = "<group>"; };
 		3343CA5E2356592D005EC399 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3343CA6B23565A5F005EC399 /* Songs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Songs.swift; sourceTree = "<group>"; };
+		3343CA6F23565B68005EC399 /* SongsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsVC.swift; sourceTree = "<group>"; };
+		3343CA7123565B90005EC399 /* PrayerRequestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerRequestVC.swift; sourceTree = "<group>"; };
+		3343CA7323565BA0005EC399 /* PrayerTimerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerTimerVC.swift; sourceTree = "<group>"; };
+		3343CA7523565E07005EC399 /* PrayerRequest.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PrayerRequest.storyboard; sourceTree = "<group>"; };
+		3343CA7723565E18005EC399 /* PrayerTimer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PrayerTimer.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +114,9 @@
 				3343CA3A2356592C005EC399 /* AppDelegate.swift */,
 				3343CA3C2356592C005EC399 /* SceneDelegate.swift */,
 				3343CA3E2356592C005EC399 /* ViewController.swift */,
-				3343CA402356592C005EC399 /* Main.storyboard */,
+				3343CA6A23565A51005EC399 /* Controllers */,
+				3343CA6D23565A6A005EC399 /* Models */,
+				3343CA6E23565A71005EC399 /* Views */,
 				3343CA432356592D005EC399 /* Assets.xcassets */,
 				3343CA452356592D005EC399 /* LaunchScreen.storyboard */,
 				3343CA482356592D005EC399 /* Info.plist */,
@@ -126,6 +140,58 @@
 				3343CA5E2356592D005EC399 /* Info.plist */,
 			);
 			path = "Folledo-iPrayUITests";
+			sourceTree = "<group>";
+		};
+		3343CA6A23565A51005EC399 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3343CA7923565F86005EC399 /* Songs */,
+				3343CA7A23565F99005EC399 /* Request */,
+				3343CA7B23565FAC005EC399 /* Timer */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		3343CA6D23565A6A005EC399 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3343CA6B23565A5F005EC399 /* Songs.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3343CA6E23565A71005EC399 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3343CA7923565F86005EC399 /* Songs */ = {
+			isa = PBXGroup;
+			children = (
+				3343CA402356592C005EC399 /* Songs.storyboard */,
+				3343CA6F23565B68005EC399 /* SongsVC.swift */,
+			);
+			path = Songs;
+			sourceTree = "<group>";
+		};
+		3343CA7A23565F99005EC399 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				3343CA7523565E07005EC399 /* PrayerRequest.storyboard */,
+				3343CA7123565B90005EC399 /* PrayerRequestVC.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		3343CA7B23565FAC005EC399 /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				3343CA7723565E18005EC399 /* PrayerTimer.storyboard */,
+				3343CA7323565BA0005EC399 /* PrayerTimerVC.swift */,
+			);
+			path = Timer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,9 +298,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3343CA7823565E18005EC399 /* PrayerTimer.storyboard in Resources */,
 				3343CA472356592D005EC399 /* LaunchScreen.storyboard in Resources */,
 				3343CA442356592D005EC399 /* Assets.xcassets in Resources */,
-				3343CA422356592C005EC399 /* Main.storyboard in Resources */,
+				3343CA422356592C005EC399 /* Songs.storyboard in Resources */,
+				3343CA7623565E07005EC399 /* PrayerRequest.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,9 +327,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3343CA6C23565A5F005EC399 /* Songs.swift in Sources */,
 				3343CA3F2356592C005EC399 /* ViewController.swift in Sources */,
 				3343CA3B2356592C005EC399 /* AppDelegate.swift in Sources */,
 				3343CA3D2356592C005EC399 /* SceneDelegate.swift in Sources */,
+				3343CA7023565B68005EC399 /* SongsVC.swift in Sources */,
+				3343CA7423565BA0005EC399 /* PrayerTimerVC.swift in Sources */,
+				3343CA7223565B90005EC399 /* PrayerRequestVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,12 +369,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		3343CA402356592C005EC399 /* Main.storyboard */ = {
+		3343CA402356592C005EC399 /* Songs.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				3343CA412356592C005EC399 /* Base */,
 			);
-			name = Main.storyboard;
+			name = Songs.storyboard;
 			sourceTree = "<group>";
 		};
 		3343CA452356592D005EC399 /* LaunchScreen.storyboard */ = {
