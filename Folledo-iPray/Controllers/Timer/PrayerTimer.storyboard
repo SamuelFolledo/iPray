@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kUh-TN-cJm">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Prayer TimerVC-->
+        <!--Timer-->
         <scene sceneID="Sz7-v7-pem">
             <objects>
                 <viewController id="6g3-8C-AIY" customClass="PrayerTimerVC" customModule="Folledo_iPray" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,10 +17,37 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="JaJ-aA-nfg"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Timer" id="Czj-Cd-Lv9"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z8R-Iv-Rsv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="145" y="119"/>
+            <point key="canvasLocation" x="1055.072463768116" y="118.52678571428571"/>
+        </scene>
+        <!--Songs-->
+        <scene sceneID="0Fa-Lt-Rkn">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Songs" id="3bT-T5-KIC" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sbi-wt-3uV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1770" y="113"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ziC-uF-wd2">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kUh-TN-cJm" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fzZ-cd-lee">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="6g3-8C-AIY" kind="relationship" relationship="rootViewController" id="ghV-SE-xlJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lDv-XC-KqJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="144.92753623188406" y="118.52678571428571"/>
         </scene>
     </scenes>
 </document>
