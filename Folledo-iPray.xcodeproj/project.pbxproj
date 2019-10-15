@@ -1,0 +1,595 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3343CA3B2356592C005EC399 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3343CA3A2356592C005EC399 /* AppDelegate.swift */; };
+		3343CA3D2356592C005EC399 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3343CA3C2356592C005EC399 /* SceneDelegate.swift */; };
+		3343CA3F2356592C005EC399 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3343CA3E2356592C005EC399 /* ViewController.swift */; };
+		3343CA422356592C005EC399 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3343CA402356592C005EC399 /* Main.storyboard */; };
+		3343CA442356592D005EC399 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3343CA432356592D005EC399 /* Assets.xcassets */; };
+		3343CA472356592D005EC399 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3343CA452356592D005EC399 /* LaunchScreen.storyboard */; };
+		3343CA522356592D005EC399 /* Folledo_iPrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3343CA512356592D005EC399 /* Folledo_iPrayTests.swift */; };
+		3343CA5D2356592D005EC399 /* Folledo_iPrayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3343CA5C2356592D005EC399 /* Folledo_iPrayUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3343CA4E2356592D005EC399 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3343CA2F2356592C005EC399 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3343CA362356592C005EC399;
+			remoteInfo = "Folledo-iPray";
+		};
+		3343CA592356592D005EC399 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3343CA2F2356592C005EC399 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3343CA362356592C005EC399;
+			remoteInfo = "Folledo-iPray";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3343CA372356592C005EC399 /* Folledo-iPray.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Folledo-iPray.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3343CA3A2356592C005EC399 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3343CA3C2356592C005EC399 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		3343CA3E2356592C005EC399 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3343CA412356592C005EC399 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3343CA432356592D005EC399 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3343CA462356592D005EC399 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3343CA482356592D005EC399 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3343CA4D2356592D005EC399 /* Folledo-iPrayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Folledo-iPrayTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3343CA512356592D005EC399 /* Folledo_iPrayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Folledo_iPrayTests.swift; sourceTree = "<group>"; };
+		3343CA532356592D005EC399 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3343CA582356592D005EC399 /* Folledo-iPrayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Folledo-iPrayUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3343CA5C2356592D005EC399 /* Folledo_iPrayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Folledo_iPrayUITests.swift; sourceTree = "<group>"; };
+		3343CA5E2356592D005EC399 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3343CA342356592C005EC399 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3343CA4A2356592D005EC399 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3343CA552356592D005EC399 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3343CA2E2356592C005EC399 = {
+			isa = PBXGroup;
+			children = (
+				3343CA392356592C005EC399 /* Folledo-iPray */,
+				3343CA502356592D005EC399 /* Folledo-iPrayTests */,
+				3343CA5B2356592D005EC399 /* Folledo-iPrayUITests */,
+				3343CA382356592C005EC399 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3343CA382356592C005EC399 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3343CA372356592C005EC399 /* Folledo-iPray.app */,
+				3343CA4D2356592D005EC399 /* Folledo-iPrayTests.xctest */,
+				3343CA582356592D005EC399 /* Folledo-iPrayUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3343CA392356592C005EC399 /* Folledo-iPray */ = {
+			isa = PBXGroup;
+			children = (
+				3343CA3A2356592C005EC399 /* AppDelegate.swift */,
+				3343CA3C2356592C005EC399 /* SceneDelegate.swift */,
+				3343CA3E2356592C005EC399 /* ViewController.swift */,
+				3343CA402356592C005EC399 /* Main.storyboard */,
+				3343CA432356592D005EC399 /* Assets.xcassets */,
+				3343CA452356592D005EC399 /* LaunchScreen.storyboard */,
+				3343CA482356592D005EC399 /* Info.plist */,
+			);
+			path = "Folledo-iPray";
+			sourceTree = "<group>";
+		};
+		3343CA502356592D005EC399 /* Folledo-iPrayTests */ = {
+			isa = PBXGroup;
+			children = (
+				3343CA512356592D005EC399 /* Folledo_iPrayTests.swift */,
+				3343CA532356592D005EC399 /* Info.plist */,
+			);
+			path = "Folledo-iPrayTests";
+			sourceTree = "<group>";
+		};
+		3343CA5B2356592D005EC399 /* Folledo-iPrayUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3343CA5C2356592D005EC399 /* Folledo_iPrayUITests.swift */,
+				3343CA5E2356592D005EC399 /* Info.plist */,
+			);
+			path = "Folledo-iPrayUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3343CA362356592C005EC399 /* Folledo-iPray */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3343CA612356592D005EC399 /* Build configuration list for PBXNativeTarget "Folledo-iPray" */;
+			buildPhases = (
+				3343CA332356592C005EC399 /* Sources */,
+				3343CA342356592C005EC399 /* Frameworks */,
+				3343CA352356592C005EC399 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Folledo-iPray";
+			productName = "Folledo-iPray";
+			productReference = 3343CA372356592C005EC399 /* Folledo-iPray.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3343CA4C2356592D005EC399 /* Folledo-iPrayTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3343CA642356592D005EC399 /* Build configuration list for PBXNativeTarget "Folledo-iPrayTests" */;
+			buildPhases = (
+				3343CA492356592D005EC399 /* Sources */,
+				3343CA4A2356592D005EC399 /* Frameworks */,
+				3343CA4B2356592D005EC399 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3343CA4F2356592D005EC399 /* PBXTargetDependency */,
+			);
+			name = "Folledo-iPrayTests";
+			productName = "Folledo-iPrayTests";
+			productReference = 3343CA4D2356592D005EC399 /* Folledo-iPrayTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3343CA572356592D005EC399 /* Folledo-iPrayUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3343CA672356592D005EC399 /* Build configuration list for PBXNativeTarget "Folledo-iPrayUITests" */;
+			buildPhases = (
+				3343CA542356592D005EC399 /* Sources */,
+				3343CA552356592D005EC399 /* Frameworks */,
+				3343CA562356592D005EC399 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3343CA5A2356592D005EC399 /* PBXTargetDependency */,
+			);
+			name = "Folledo-iPrayUITests";
+			productName = "Folledo-iPrayUITests";
+			productReference = 3343CA582356592D005EC399 /* Folledo-iPrayUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3343CA2F2356592C005EC399 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1110;
+				LastUpgradeCheck = 1110;
+				ORGANIZATIONNAME = SamuelFolledo;
+				TargetAttributes = {
+					3343CA362356592C005EC399 = {
+						CreatedOnToolsVersion = 11.1;
+					};
+					3343CA4C2356592D005EC399 = {
+						CreatedOnToolsVersion = 11.1;
+						TestTargetID = 3343CA362356592C005EC399;
+					};
+					3343CA572356592D005EC399 = {
+						CreatedOnToolsVersion = 11.1;
+						TestTargetID = 3343CA362356592C005EC399;
+					};
+				};
+			};
+			buildConfigurationList = 3343CA322356592C005EC399 /* Build configuration list for PBXProject "Folledo-iPray" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3343CA2E2356592C005EC399;
+			productRefGroup = 3343CA382356592C005EC399 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3343CA362356592C005EC399 /* Folledo-iPray */,
+				3343CA4C2356592D005EC399 /* Folledo-iPrayTests */,
+				3343CA572356592D005EC399 /* Folledo-iPrayUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3343CA352356592C005EC399 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3343CA472356592D005EC399 /* LaunchScreen.storyboard in Resources */,
+				3343CA442356592D005EC399 /* Assets.xcassets in Resources */,
+				3343CA422356592C005EC399 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3343CA4B2356592D005EC399 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3343CA562356592D005EC399 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3343CA332356592C005EC399 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3343CA3F2356592C005EC399 /* ViewController.swift in Sources */,
+				3343CA3B2356592C005EC399 /* AppDelegate.swift in Sources */,
+				3343CA3D2356592C005EC399 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3343CA492356592D005EC399 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3343CA522356592D005EC399 /* Folledo_iPrayTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3343CA542356592D005EC399 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3343CA5D2356592D005EC399 /* Folledo_iPrayUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3343CA4F2356592D005EC399 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3343CA362356592C005EC399 /* Folledo-iPray */;
+			targetProxy = 3343CA4E2356592D005EC399 /* PBXContainerItemProxy */;
+		};
+		3343CA5A2356592D005EC399 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3343CA362356592C005EC399 /* Folledo-iPray */;
+			targetProxy = 3343CA592356592D005EC399 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3343CA402356592C005EC399 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3343CA412356592C005EC399 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3343CA452356592D005EC399 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3343CA462356592D005EC399 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3343CA5F2356592D005EC399 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3343CA602356592D005EC399 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3343CA622356592D005EC399 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9NY68F4K3P;
+				INFOPLIST_FILE = "Folledo-iPray/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "SamuelFolledo.Folledo-iPray";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3343CA632356592D005EC399 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9NY68F4K3P;
+				INFOPLIST_FILE = "Folledo-iPray/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "SamuelFolledo.Folledo-iPray";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3343CA652356592D005EC399 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9NY68F4K3P;
+				INFOPLIST_FILE = "Folledo-iPrayTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "SamuelFolledo.Folledo-iPrayTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Folledo-iPray.app/Folledo-iPray";
+			};
+			name = Debug;
+		};
+		3343CA662356592D005EC399 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9NY68F4K3P;
+				INFOPLIST_FILE = "Folledo-iPrayTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "SamuelFolledo.Folledo-iPrayTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Folledo-iPray.app/Folledo-iPray";
+			};
+			name = Release;
+		};
+		3343CA682356592D005EC399 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9NY68F4K3P;
+				INFOPLIST_FILE = "Folledo-iPrayUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "SamuelFolledo.Folledo-iPrayUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Folledo-iPray";
+			};
+			name = Debug;
+		};
+		3343CA692356592D005EC399 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9NY68F4K3P;
+				INFOPLIST_FILE = "Folledo-iPrayUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "SamuelFolledo.Folledo-iPrayUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Folledo-iPray";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3343CA322356592C005EC399 /* Build configuration list for PBXProject "Folledo-iPray" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3343CA5F2356592D005EC399 /* Debug */,
+				3343CA602356592D005EC399 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3343CA612356592D005EC399 /* Build configuration list for PBXNativeTarget "Folledo-iPray" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3343CA622356592D005EC399 /* Debug */,
+				3343CA632356592D005EC399 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3343CA642356592D005EC399 /* Build configuration list for PBXNativeTarget "Folledo-iPrayTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3343CA652356592D005EC399 /* Debug */,
+				3343CA662356592D005EC399 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3343CA672356592D005EC399 /* Build configuration list for PBXNativeTarget "Folledo-iPrayUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3343CA682356592D005EC399 /* Debug */,
+				3343CA692356592D005EC399 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3343CA2F2356592C005EC399 /* Project object */;
+}
