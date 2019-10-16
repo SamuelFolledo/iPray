@@ -21,6 +21,9 @@
 		3343CA7423565BA0005EC399 /* PrayerTimerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3343CA7323565BA0005EC399 /* PrayerTimerVC.swift */; };
 		3343CA7623565E07005EC399 /* PrayerRequest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3343CA7523565E07005EC399 /* PrayerRequest.storyboard */; };
 		3343CA7823565E18005EC399 /* PrayerTimer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3343CA7723565E18005EC399 /* PrayerTimer.storyboard */; };
+		3371831323578D19004C9489 /* ChristianSongs in Resources */ = {isa = PBXBuildFile; fileRef = 3371831223578D19004C9489 /* ChristianSongs */; };
+		3371831623578DAB004C9489 /* SongCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3371831423578DAB004C9489 /* SongCell.swift */; };
+		3371831723578DAB004C9489 /* SongCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3371831523578DAB004C9489 /* SongCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +64,9 @@
 		3343CA7323565BA0005EC399 /* PrayerTimerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerTimerVC.swift; sourceTree = "<group>"; };
 		3343CA7523565E07005EC399 /* PrayerRequest.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PrayerRequest.storyboard; sourceTree = "<group>"; };
 		3343CA7723565E18005EC399 /* PrayerTimer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PrayerTimer.storyboard; sourceTree = "<group>"; };
+		3371831223578D19004C9489 /* ChristianSongs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ChristianSongs; sourceTree = "<group>"; };
+		3371831423578DAB004C9489 /* SongCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongCell.swift; sourceTree = "<group>"; };
+		3371831523578DAB004C9489 /* SongCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SongCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +124,7 @@
 				3343CA6D23565A6A005EC399 /* Models */,
 				3343CA6E23565A71005EC399 /* Views */,
 				3343CA432356592D005EC399 /* Assets.xcassets */,
+				3371831223578D19004C9489 /* ChristianSongs */,
 				3343CA452356592D005EC399 /* LaunchScreen.storyboard */,
 				3343CA482356592D005EC399 /* Info.plist */,
 			);
@@ -163,6 +170,8 @@
 		3343CA6E23565A71005EC399 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3371831423578DAB004C9489 /* SongCell.swift */,
+				3371831523578DAB004C9489 /* SongCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -299,6 +308,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3343CA7823565E18005EC399 /* PrayerTimer.storyboard in Resources */,
+				3371831323578D19004C9489 /* ChristianSongs in Resources */,
+				3371831723578DAB004C9489 /* SongCell.xib in Resources */,
 				3343CA472356592D005EC399 /* LaunchScreen.storyboard in Resources */,
 				3343CA442356592D005EC399 /* Assets.xcassets in Resources */,
 				3343CA422356592C005EC399 /* Songs.storyboard in Resources */,
@@ -327,6 +338,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3371831623578DAB004C9489 /* SongCell.swift in Sources */,
 				3343CA6C23565A5F005EC399 /* Songs.swift in Sources */,
 				3343CA3F2356592C005EC399 /* ViewController.swift in Sources */,
 				3343CA3B2356592C005EC399 /* AppDelegate.swift in Sources */,
