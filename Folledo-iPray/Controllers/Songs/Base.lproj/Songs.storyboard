@@ -92,11 +92,20 @@
                         <outlet property="doneButton" destination="3T3-dj-84f" id="UFV-Z0-Mrh"/>
                         <outlet property="songsTableView" destination="pTI-Zr-O99" id="7NO-3t-prm"/>
                         <segue destination="aUS-Mg-nWU" kind="presentation" identifier="toRequestIdentifier" modalPresentationStyle="fullScreen" id="4iT-Tb-L0l"/>
+                        <segue destination="7ZJ-un-vkY" kind="presentation" identifier="toSongInfoIdentifier" id="E38-jf-s9g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1122" y="139"/>
+        </scene>
+        <!--SongInfo-->
+        <scene sceneID="uT9-Rc-0hf">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SongInfo" id="7ZJ-un-vkY" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="96r-Ip-a1d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1878" y="-73"/>
         </scene>
         <!--PrayerRequest-->
         <scene sceneID="VWz-VX-Hs4">

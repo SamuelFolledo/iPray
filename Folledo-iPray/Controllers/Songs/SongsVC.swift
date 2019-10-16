@@ -22,10 +22,8 @@ class SongsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         createDataCell()
-//        self.songsTableView.register(SongCell.self, forCellReuseIdentifier: cellID)
-        self.songsTableView.rowHeight = UITableView.automaticDimension //but we still have to automatically make them resize to the contents inside of it
-        self.songsTableView.estimatedRowHeight = 50 //to make the cell have a limit and save memory //now in cellForRowAt layoutSubviews()
         songsTableView.tableFooterView = UIView() //remove the additional line separator underneath our products
+        
     }
     
     
@@ -67,6 +65,30 @@ class SongsVC: UIViewController {
             completion()
         }
     }
+    
+//MARK: Segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case "toRequestIdentifier":
+            if let song = sender as? Song {
+                if let nav = segue.destination as? UINavigationController,
+                    let vc: PrayerRequestVC = nav.topViewController as? PrayerRequestVC {
+                    vc.song = song
+                }
+            } else {
+                print("Skipped! No song is passed")
+            }
+        case "toSongInfoIdentifier":
+            if let song = sender as? Song {
+                if let nav = segue.destination as? UINavigationController,
+                    let vc: SongInfoVC = nav.topViewController as? SongInfoVC {
+                    vc.song = song
+                }
+            }
+        default:
+            break
+        }
+    }
 }
 
 extension SongsVC: UITableViewDelegate, UITableViewDataSource {
@@ -82,7 +104,17 @@ extension SongsVC: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let song = songs[indexPath.row]
+        performSegue(withIdentifier: "toRequestIdentifier", sender: song)
+    }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 50
+    }
+    
+    func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
+        let song = songs[indexPath.row]
+        performSegue(withIdentifier: "toSongInfoIdentifier", sender: song)
     }
 }

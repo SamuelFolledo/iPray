@@ -11,7 +11,7 @@ import UIKit
 class PrayerRequestVC: UIViewController {
 
 //MARK: Properties
-    
+    var song: Song?
 //MARK: IBOutlets
     @IBOutlet weak var requestTextView: UITextView!
     @IBOutlet weak var backButtonTapped: UIBarButtonItem!

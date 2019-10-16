@@ -11,14 +11,18 @@ import UIKit
 class SongInfoVC: UIViewController {
 
 //MARK: Properties
+    var song: Song?
     
 //MARK: IBOutlets
     
+    @IBOutlet weak var songImageView: UIImageView!
+    @IBOutlet weak var artistLabel: UILabel!
     
 //MARK: LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        self.title = song!.songTitle
+        songImageView.image = song?.songImage
     }
     
     
