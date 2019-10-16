@@ -28,7 +28,6 @@ class SongCell: UITableViewCell {
     }
     
     func populateCell() {
-        print("Song is \(song.songTitle!)")
         self.songTitleLabel.text = song.songTitle!
         self.songImageView.image = song.songImage!
     }

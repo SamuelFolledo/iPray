@@ -67,7 +67,6 @@ class SongsVC: UIViewController {
             completion()
         }
     }
-    
 }
 
 extension SongsVC: UITableViewDelegate, UITableViewDataSource {
@@ -77,6 +76,7 @@ extension SongsVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = songsTableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as! SongCell
+        cell.accessoryType = .detailButton //i on the right side of the cell
         cell.song = songs[indexPath.row]
         cell.populateCell()
         return cell

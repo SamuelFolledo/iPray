@@ -23,6 +23,9 @@
 		3343CA7823565E18005EC399 /* PrayerTimer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3343CA7723565E18005EC399 /* PrayerTimer.storyboard */; };
 		3371831323578D19004C9489 /* ChristianSongs in Resources */ = {isa = PBXBuildFile; fileRef = 3371831223578D19004C9489 /* ChristianSongs */; };
 		3371831623578DAB004C9489 /* SongCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3371831423578DAB004C9489 /* SongCell.swift */; };
+		337183192357C590004C9489 /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337183182357C590004C9489 /* Questions.swift */; };
+		3371831B2357C77E004C9489 /* SongInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3371831A2357C77E004C9489 /* SongInfo.storyboard */; };
+		3371831D2357C793004C9489 /* SongInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3371831C2357C793004C9489 /* SongInfoVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +68,9 @@
 		3343CA7723565E18005EC399 /* PrayerTimer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PrayerTimer.storyboard; sourceTree = "<group>"; };
 		3371831223578D19004C9489 /* ChristianSongs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ChristianSongs; sourceTree = "<group>"; };
 		3371831423578DAB004C9489 /* SongCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongCell.swift; sourceTree = "<group>"; };
+		337183182357C590004C9489 /* Questions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
+		3371831A2357C77E004C9489 /* SongInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SongInfo.storyboard; sourceTree = "<group>"; };
+		3371831C2357C793004C9489 /* SongInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongInfoVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				3343CA3A2356592C005EC399 /* AppDelegate.swift */,
+				337183182357C590004C9489 /* Questions.swift */,
 				3343CA3C2356592C005EC399 /* SceneDelegate.swift */,
 				3343CA3E2356592C005EC399 /* ViewController.swift */,
 				3343CA6A23565A51005EC399 /* Controllers */,
@@ -178,6 +185,7 @@
 			children = (
 				3343CA402356592C005EC399 /* Songs.storyboard */,
 				3343CA6F23565B68005EC399 /* SongsVC.swift */,
+				3371831E2357C79A004C9489 /* SongInfo */,
 			);
 			path = Songs;
 			sourceTree = "<group>";
@@ -198,6 +206,15 @@
 				3343CA7323565BA0005EC399 /* PrayerTimerVC.swift */,
 			);
 			path = Timer;
+			sourceTree = "<group>";
+		};
+		3371831E2357C79A004C9489 /* SongInfo */ = {
+			isa = PBXGroup;
+			children = (
+				3371831A2357C77E004C9489 /* SongInfo.storyboard */,
+				3371831C2357C793004C9489 /* SongInfoVC.swift */,
+			);
+			path = SongInfo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,6 +326,7 @@
 				3343CA472356592D005EC399 /* LaunchScreen.storyboard in Resources */,
 				3343CA442356592D005EC399 /* Assets.xcassets in Resources */,
 				3343CA422356592C005EC399 /* Songs.storyboard in Resources */,
+				3371831B2357C77E004C9489 /* SongInfo.storyboard in Resources */,
 				3343CA7623565E07005EC399 /* PrayerRequest.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -334,10 +352,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				337183192357C590004C9489 /* Questions.swift in Sources */,
 				3371831623578DAB004C9489 /* SongCell.swift in Sources */,
 				3343CA6C23565A5F005EC399 /* Song.swift in Sources */,
 				3343CA3F2356592C005EC399 /* ViewController.swift in Sources */,
 				3343CA3B2356592C005EC399 /* AppDelegate.swift in Sources */,
+				3371831D2357C793004C9489 /* SongInfoVC.swift in Sources */,
 				3343CA3D2356592C005EC399 /* SceneDelegate.swift in Sources */,
 				3343CA7023565B68005EC399 /* SongsVC.swift in Sources */,
 				3343CA7423565BA0005EC399 /* PrayerTimerVC.swift in Sources */,
