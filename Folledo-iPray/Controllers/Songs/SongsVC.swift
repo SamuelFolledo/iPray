@@ -35,13 +35,26 @@ class SongsVC: UIViewController {
         let song3 = Song.init(songID: "3", songTitle: "No One Higher", songName: "NoOneHigher-AaronShust", image: UIImage(named: "SFLogo")!)
         let song4 = Song.init(songID: "4", songTitle: "Oceans (long version)", songName: "Oceans(long)-Hillsong", image: UIImage(named: "SFLogo")!)
         let song5 = Song.init(songID: "5", songTitle: "Reckless Love", songName: "RecklessLove-Bethel", image: UIImage(named: "SFLogo")!)
+        let song6 = Song.init(songID: "6", songTitle: "Oceans (shorter version)", songName: "Oceans(long)-Hillsong")
+        let song7 = Song.init(songID: "7", songTitle: "Unfailing Love", songName: "UnfailingLove-ChrisTomlin")
+        let song8 = Song.init(songID: "8", songTitle: "What A Beautiful Name It Is", songName: "WhatABeautifulNameItIs")
+        let song9 = Song.init(songID: "9", songTitle: "Who You Say I Am", songName: "WhoYouSayIAm")
+        
+        
         self.insertRowWithAnimation(row: 0, cell: song0) {
             self.insertRowWithAnimation(row: 1, cell: song1) {
                 self.insertRowWithAnimation(row: 2, cell: song2) {
                     self.insertRowWithAnimation(row: 3, cell: song3) {
                         self.insertRowWithAnimation(row: 4, cell: song4) {
                             self.insertRowWithAnimation(row: 5, cell: song5) {
-                                print("Done inserting rows")
+                                self.insertRowWithAnimation(row: 6, cell: song6) {
+                                    self.insertRowWithAnimation(row: 7, cell: song7) {
+                                        self.insertRowWithAnimation(row: 8, cell: song8) {
+                                            self.insertRowWithAnimation(row: 9, cell: song9) {
+                                            }
+                                        }
+                                    }
+                                }
                             }
                         }
                     }
