@@ -9,7 +9,11 @@
 import UIKit
 
 class SongCell: UITableViewCell {
-
+    
+    @IBOutlet weak var songImage: UIImageView!
+    @IBOutlet weak var songTitleLabel: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

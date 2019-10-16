@@ -12,10 +12,11 @@ class SongsVC: UIViewController {
 
 //MARK: Properties
     var songs: [Song] = []
+    
 //MARK: IBOutlets
     @IBOutlet weak var songsTableView: UITableView!
-    
     @IBOutlet weak var doneButton: UIButton!
+    @IBOutlet weak var songCell: SongCell!
     
 //MARK: LifeCycle
     override func viewDidLoad() {

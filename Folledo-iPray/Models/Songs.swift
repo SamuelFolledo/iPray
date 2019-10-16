@@ -14,4 +14,6 @@ class Song {
     var songImage: String = ""
     var songURL: String = ""
     var songLength: Float = 0.0
+    var songCategory1: String = ""
+    var songCategory2: String = ""
 }

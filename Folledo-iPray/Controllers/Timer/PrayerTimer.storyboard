@@ -34,6 +34,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="backButton" destination="Tiq-NM-R19" id="O3e-D8-bQK"/>
+                        <segue destination="3bT-T5-KIC" kind="presentation" identifier="toSongIdentifier" modalPresentationStyle="fullScreen" id="xt5-bd-3ei"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z8R-Iv-Rsv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
