@@ -10,14 +10,64 @@
         <!--Prayer Requests-->
         <scene sceneID="agX-ep-pLK">
             <objects>
-                <viewController id="b25-op-TtV" customClass="PrayerRequestVC" customModule="Folledo_iPray" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" id="b25-op-TtV" customClass="PrayerRequestVC" customModule="Folledo_iPray" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JlX-TO-R44">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BiP-Xp-NnC" userLabel="request View">
+                                <rect key="frame" x="41.5" y="108" width="331" height="387"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" keyboardDismissMode="interactive" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Rse-By-t35">
+                                        <rect key="frame" x="0.0" y="0.0" width="331" height="387"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="Rse-By-t35" firstAttribute="width" secondItem="BiP-Xp-NnC" secondAttribute="width" id="6bK-JJ-Khr"/>
+                                    <constraint firstItem="Rse-By-t35" firstAttribute="centerX" secondItem="BiP-Xp-NnC" secondAttribute="centerX" id="gpF-3C-RsS"/>
+                                    <constraint firstItem="Rse-By-t35" firstAttribute="height" secondItem="BiP-Xp-NnC" secondAttribute="height" id="sU8-mc-swD"/>
+                                    <constraint firstItem="Rse-By-t35" firstAttribute="centerY" secondItem="BiP-Xp-NnC" secondAttribute="centerY" id="sWK-FT-EJ4"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Zk-bD-EVi">
+                                <rect key="frame" x="41.5" y="774.5" width="331" height="77.5"/>
+                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <state key="normal" title="Continue">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="HMO-fx-fDv" kind="show" id="4xq-v2-kxv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4Zk-bD-EVi" firstAttribute="centerX" secondItem="jCA-0c-16S" secondAttribute="centerX" id="2T7-Vf-AVv"/>
+                            <constraint firstItem="jCA-0c-16S" firstAttribute="bottom" secondItem="4Zk-bD-EVi" secondAttribute="bottom" constant="10" id="B6E-Zt-2AA"/>
+                            <constraint firstItem="BiP-Xp-NnC" firstAttribute="top" secondItem="jCA-0c-16S" secondAttribute="top" constant="20" id="I1l-tF-DWf"/>
+                            <constraint firstItem="BiP-Xp-NnC" firstAttribute="width" secondItem="jCA-0c-16S" secondAttribute="width" multiplier="4:5" id="PFg-cU-htI"/>
+                            <constraint firstItem="BiP-Xp-NnC" firstAttribute="centerX" secondItem="JlX-TO-R44" secondAttribute="centerX" id="Qbg-pr-Xtr"/>
+                            <constraint firstItem="4Zk-bD-EVi" firstAttribute="width" secondItem="jCA-0c-16S" secondAttribute="width" multiplier="4:5" id="jE1-ve-7gv"/>
+                            <constraint firstItem="BiP-Xp-NnC" firstAttribute="height" secondItem="jCA-0c-16S" secondAttribute="height" multiplier="1:2" id="peq-ld-Lwb"/>
+                            <constraint firstItem="4Zk-bD-EVi" firstAttribute="height" secondItem="jCA-0c-16S" secondAttribute="height" multiplier="1:10" id="uHX-vM-iof"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="jCA-0c-16S"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Prayer Requests" id="gu0-7J-Z6a"/>
+                    <navigationItem key="navigationItem" title="Prayer Requests" id="gu0-7J-Z6a">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="6Sv-KB-E2p"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="backButtonTapped" destination="6Sv-KB-E2p" id="GCE-jK-jPy"/>
+                        <outlet property="continueButton" destination="4Zk-bD-EVi" id="uyl-Zt-EIT"/>
+                        <outlet property="requestTextView" destination="Rse-By-t35" id="U1e-Si-UdZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eso-FK-Z30" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -26,7 +76,9 @@
         <!--PrayerTimer-->
         <scene sceneID="kfT-lG-8H0">
             <objects>
-                <viewControllerPlaceholder storyboardName="PrayerTimer" id="HMO-fx-fDv" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="PrayerTimer" id="HMO-fx-fDv" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="8m8-1q-boK"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jda-kk-D1b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1722" y="62"/>

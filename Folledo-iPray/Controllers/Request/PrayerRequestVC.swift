@@ -13,7 +13,9 @@ class PrayerRequestVC: UIViewController {
 //MARK: Properties
     
 //MARK: IBOutlets
-    
+    @IBOutlet weak var requestTextView: UITextView!
+    @IBOutlet weak var backButtonTapped: UIBarButtonItem!
+    @IBOutlet weak var continueButton: UIButton!
     
 //MARK: LifeCycle
     override func viewDidLoad() {

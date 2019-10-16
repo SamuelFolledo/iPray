@@ -11,8 +11,10 @@ import UIKit
 class SongsVC: UIViewController {
 
 //MARK: Properties
-    
+    var songs: [Song] = []
 //MARK: IBOutlets
+    @IBOutlet weak var continueButton: UIButton!
+    @IBOutlet weak var songsTableView: UITableView!
     
     
 //MARK: LifeCycle
@@ -28,4 +30,16 @@ class SongsVC: UIViewController {
     
 //MARK: Helpers
 
+}
+
+extension SongsVC: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return songs.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return UITableViewCell()
+    }
+    
+    
 }

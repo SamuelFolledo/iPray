@@ -10,14 +10,23 @@
         <!--Timer-->
         <scene sceneID="Sz7-v7-pem">
             <objects>
-                <viewController id="6g3-8C-AIY" customClass="PrayerTimerVC" customModule="Folledo_iPray" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" id="6g3-8C-AIY" customClass="PrayerTimerVC" customModule="Folledo_iPray" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZRR-of-Ov8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="JaJ-aA-nfg"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Timer" id="Czj-Cd-Lv9"/>
+                    <navigationItem key="navigationItem" title="Timer" id="Czj-Cd-Lv9">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="Tiq-NM-R19">
+                            <connections>
+                                <action selector="backButtonTapped:" destination="6g3-8C-AIY" id="2QL-KS-cND"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="backButton" destination="Tiq-NM-R19" id="Hol-IK-QQ4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z8R-Iv-Rsv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -29,7 +38,7 @@
                 <viewControllerPlaceholder storyboardName="Songs" id="3bT-T5-KIC" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sbi-wt-3uV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1770" y="113"/>
+            <point key="canvasLocation" x="1642" y="119"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ziC-uF-wd2">

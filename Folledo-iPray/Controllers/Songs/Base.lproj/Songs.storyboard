@@ -10,14 +10,55 @@
         <!--Songs-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="SongsVC" customModule="Folledo_iPray" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="SongsVC" customModule="Folledo_iPray" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pTI-Zr-O99">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="qoL-ic-1uD">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qoL-ic-1uD" id="VHo-CD-O09">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3T3-dj-84f">
+                                <rect key="frame" x="41.5" y="774.5" width="331" height="77.5"/>
+                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <state key="normal" title="Continue">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="aUS-Mg-nWU" kind="show" id="nCg-pL-70B"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pTI-Zr-O99" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" id="7ZW-1w-D9q"/>
+                            <constraint firstItem="pTI-Zr-O99" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="7sN-P7-eGd"/>
+                            <constraint firstItem="pTI-Zr-O99" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="HBa-MB-F3p"/>
+                            <constraint firstItem="3T3-dj-84f" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="4:5" id="Tmz-Qz-ees"/>
+                            <constraint firstItem="3T3-dj-84f" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="1:10" id="WvQ-bc-Qrg"/>
+                            <constraint firstItem="3T3-dj-84f" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="fpS-En-uKl"/>
+                            <constraint firstItem="pTI-Zr-O99" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" id="hXO-9D-4zO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3T3-dj-84f" secondAttribute="bottom" constant="10" id="y7y-cK-uVO"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Songs" id="Beh-Qw-Zt5"/>
+                    <connections>
+                        <outlet property="continueButton" destination="3T3-dj-84f" id="gkC-dN-ems"/>
+                        <outlet property="songsTableView" destination="pTI-Zr-O99" id="7NO-3t-prm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -26,7 +67,9 @@
         <!--PrayerRequest-->
         <scene sceneID="VWz-VX-Hs4">
             <objects>
-                <viewControllerPlaceholder storyboardName="PrayerRequest" id="aUS-Mg-nWU" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="PrayerRequest" id="aUS-Mg-nWU" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="StJ-j3-1AC"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O6e-TV-QZn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2025" y="112"/>

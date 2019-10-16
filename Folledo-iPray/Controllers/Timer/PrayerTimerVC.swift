@@ -13,6 +13,7 @@ class PrayerTimerVC: UIViewController {
 //MARK: Properties
     
 //MARK: IBOutlets
+    @IBOutlet weak var backButton: UIBarButtonItem!
     
     
 //MARK: LifeCycle
@@ -25,6 +26,10 @@ class PrayerTimerVC: UIViewController {
 //MARK: Private Methods
     
 //MARK: IBActions
+    
+    @IBAction func backButtonTapped(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
 //MARK: Helpers
 

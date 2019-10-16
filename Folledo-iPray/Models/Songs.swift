@@ -7,3 +7,11 @@
 //
 
 import Foundation
+
+class Song {
+    var songID: String = ""
+    var songTitle: String = ""
+    var songImage: String = ""
+    var songURL: String = ""
+    var songLength: Float = 0.0
+}
