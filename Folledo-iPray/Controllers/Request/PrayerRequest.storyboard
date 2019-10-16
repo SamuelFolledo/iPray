@@ -39,11 +39,12 @@
                                 <rect key="frame" x="41.5" y="774.5" width="331" height="77.5"/>
                                 <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                                <state key="normal" title="Continue">
+                                <state key="normal" title="Skip">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="HMO-fx-fDv" kind="show" id="4xq-v2-kxv"/>
+                                    <action selector="doneButton:" destination="b25-op-TtV" eventType="touchUpInside" id="NH6-k5-W7U"/>
+                                    <segue destination="HMO-fx-fDv" kind="presentation" identifier="toTimerIdentifier" modalPresentationStyle="fullScreen" id="4xq-v2-kxv"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -61,10 +62,14 @@
                         <viewLayoutGuide key="safeArea" id="jCA-0c-16S"/>
                     </view>
                     <navigationItem key="navigationItem" title="Prayer Requests" id="gu0-7J-Z6a">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="6Sv-KB-E2p"/>
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="6Sv-KB-E2p">
+                            <connections>
+                                <action selector="backButtonTapped:" destination="b25-op-TtV" id="I1v-TF-fpu"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="backButtonTapped" destination="6Sv-KB-E2p" id="GCE-jK-jPy"/>
+                        <outlet property="backButtonTapped" destination="6Sv-KB-E2p" id="Zfh-jC-1AE"/>
                         <outlet property="continueButton" destination="4Zk-bD-EVi" id="uyl-Zt-EIT"/>
                         <outlet property="requestTextView" destination="Rse-By-t35" id="U1e-Si-UdZ"/>
                     </connections>
@@ -86,7 +91,7 @@
         <!--Navigation Controller-->
         <scene sceneID="jUi-0C-hJ1">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yDU-4F-xUB" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" hidesBarsWhenKeyboardAppears="YES" id="yDU-4F-xUB" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MIi-ZF-E4R">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>

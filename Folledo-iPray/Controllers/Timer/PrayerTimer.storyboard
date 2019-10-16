@@ -14,18 +14,26 @@
                     <view key="view" contentMode="scaleToFill" id="ZRR-of-Ov8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EjP-7V-hNK">
+                                <rect key="frame" x="87" y="239" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <viewLayoutGuide key="contentLayoutGuide" id="rH9-J0-KDY"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="5KQ-CK-vac"/>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="JaJ-aA-nfg"/>
                     </view>
                     <navigationItem key="navigationItem" title="Timer" id="Czj-Cd-Lv9">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="Tiq-NM-R19">
                             <connections>
-                                <action selector="backButtonTapped:" destination="6g3-8C-AIY" id="2QL-KS-cND"/>
+                                <action selector="backButtonTapped:" destination="6g3-8C-AIY" id="eRY-sD-lis"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="backButton" destination="Tiq-NM-R19" id="Hol-IK-QQ4"/>
+                        <outlet property="backButton" destination="Tiq-NM-R19" id="O3e-D8-bQK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z8R-Iv-Rsv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -43,7 +51,7 @@
         <!--Navigation Controller-->
         <scene sceneID="ziC-uF-wd2">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kUh-TN-cJm" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" hidesBarsWhenKeyboardAppears="YES" id="kUh-TN-cJm" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fzZ-cd-lee">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>

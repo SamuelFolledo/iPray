@@ -37,7 +37,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="aUS-Mg-nWU" kind="show" id="nCg-pL-70B"/>
+                                    <action selector="doneButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zNc-gp-pp2"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -56,13 +56,22 @@
                     </view>
                     <navigationItem key="navigationItem" title="Songs" id="Beh-Qw-Zt5"/>
                     <connections>
-                        <outlet property="continueButton" destination="3T3-dj-84f" id="gkC-dN-ems"/>
+                        <outlet property="doneButton" destination="3T3-dj-84f" id="UFV-Z0-Mrh"/>
                         <outlet property="songsTableView" destination="pTI-Zr-O99" id="7NO-3t-prm"/>
+                        <segue destination="aUS-Mg-nWU" kind="presentation" identifier="toRequestIdentifier" modalPresentationStyle="fullScreen" id="4iT-Tb-L0l"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1122" y="139"/>
+        </scene>
+        <!--PrayerTimer-->
+        <scene sceneID="4fd-TG-H0Z">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PrayerTimer" id="no7-YG-Cx4" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KQU-3d-75B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1880" y="28"/>
         </scene>
         <!--PrayerRequest-->
         <scene sceneID="VWz-VX-Hs4">
@@ -72,7 +81,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O6e-TV-QZn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2025" y="112"/>
+            <point key="canvasLocation" x="1826" y="392"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Wrn-Ra-Zkk">

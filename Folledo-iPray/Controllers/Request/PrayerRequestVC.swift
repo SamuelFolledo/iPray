@@ -27,6 +27,12 @@ class PrayerRequestVC: UIViewController {
 //MARK: Private Methods
     
 //MARK: IBActions
+    @IBAction func doneButton(_ sender: Any) {
+        self.performSegue(withIdentifier: "toTimerIdentifier", sender: nil)
+    }
+    @IBAction func backButtonTapped(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
 //MARK: Helpers
 
