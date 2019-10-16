@@ -10,9 +10,11 @@ import UIKit
 
 class SongCell: UITableViewCell {
     
-    @IBOutlet weak var songImage: UIImageView!
-    @IBOutlet weak var songTitleLabel: UILabel!
+    var song: Song!
     
+//MARK: IBOutlets
+    @IBOutlet weak var songImageView: UIImageView!
+    @IBOutlet weak var songTitleLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -21,8 +23,13 @@ class SongCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
         // Configure the view for the selected state
+        
     }
     
+    func populateCell() {
+        print("Song is \(song.songTitle!)")
+        self.songTitleLabel.text = song.songTitle!
+        self.songImageView.image = song.songImage!
+    }
 }

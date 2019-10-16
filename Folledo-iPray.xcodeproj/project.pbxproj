@@ -15,7 +15,7 @@
 		3343CA472356592D005EC399 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3343CA452356592D005EC399 /* LaunchScreen.storyboard */; };
 		3343CA522356592D005EC399 /* Folledo_iPrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3343CA512356592D005EC399 /* Folledo_iPrayTests.swift */; };
 		3343CA5D2356592D005EC399 /* Folledo_iPrayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3343CA5C2356592D005EC399 /* Folledo_iPrayUITests.swift */; };
-		3343CA6C23565A5F005EC399 /* Songs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3343CA6B23565A5F005EC399 /* Songs.swift */; };
+		3343CA6C23565A5F005EC399 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3343CA6B23565A5F005EC399 /* Song.swift */; };
 		3343CA7023565B68005EC399 /* SongsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3343CA6F23565B68005EC399 /* SongsVC.swift */; };
 		3343CA7223565B90005EC399 /* PrayerRequestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3343CA7123565B90005EC399 /* PrayerRequestVC.swift */; };
 		3343CA7423565BA0005EC399 /* PrayerTimerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3343CA7323565BA0005EC399 /* PrayerTimerVC.swift */; };
@@ -23,7 +23,6 @@
 		3343CA7823565E18005EC399 /* PrayerTimer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3343CA7723565E18005EC399 /* PrayerTimer.storyboard */; };
 		3371831323578D19004C9489 /* ChristianSongs in Resources */ = {isa = PBXBuildFile; fileRef = 3371831223578D19004C9489 /* ChristianSongs */; };
 		3371831623578DAB004C9489 /* SongCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3371831423578DAB004C9489 /* SongCell.swift */; };
-		3371831723578DAB004C9489 /* SongCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3371831523578DAB004C9489 /* SongCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,7 +57,7 @@
 		3343CA582356592D005EC399 /* Folledo-iPrayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Folledo-iPrayUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3343CA5C2356592D005EC399 /* Folledo_iPrayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Folledo_iPrayUITests.swift; sourceTree = "<group>"; };
 		3343CA5E2356592D005EC399 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3343CA6B23565A5F005EC399 /* Songs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Songs.swift; sourceTree = "<group>"; };
+		3343CA6B23565A5F005EC399 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 		3343CA6F23565B68005EC399 /* SongsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsVC.swift; sourceTree = "<group>"; };
 		3343CA7123565B90005EC399 /* PrayerRequestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerRequestVC.swift; sourceTree = "<group>"; };
 		3343CA7323565BA0005EC399 /* PrayerTimerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerTimerVC.swift; sourceTree = "<group>"; };
@@ -66,7 +65,6 @@
 		3343CA7723565E18005EC399 /* PrayerTimer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PrayerTimer.storyboard; sourceTree = "<group>"; };
 		3371831223578D19004C9489 /* ChristianSongs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ChristianSongs; sourceTree = "<group>"; };
 		3371831423578DAB004C9489 /* SongCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongCell.swift; sourceTree = "<group>"; };
-		3371831523578DAB004C9489 /* SongCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SongCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,7 +160,7 @@
 		3343CA6D23565A6A005EC399 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				3343CA6B23565A5F005EC399 /* Songs.swift */,
+				3343CA6B23565A5F005EC399 /* Song.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -171,7 +169,6 @@
 			isa = PBXGroup;
 			children = (
 				3371831423578DAB004C9489 /* SongCell.swift */,
-				3371831523578DAB004C9489 /* SongCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -309,7 +306,6 @@
 			files = (
 				3343CA7823565E18005EC399 /* PrayerTimer.storyboard in Resources */,
 				3371831323578D19004C9489 /* ChristianSongs in Resources */,
-				3371831723578DAB004C9489 /* SongCell.xib in Resources */,
 				3343CA472356592D005EC399 /* LaunchScreen.storyboard in Resources */,
 				3343CA442356592D005EC399 /* Assets.xcassets in Resources */,
 				3343CA422356592C005EC399 /* Songs.storyboard in Resources */,
@@ -339,7 +335,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3371831623578DAB004C9489 /* SongCell.swift in Sources */,
-				3343CA6C23565A5F005EC399 /* Songs.swift in Sources */,
+				3343CA6C23565A5F005EC399 /* Song.swift in Sources */,
 				3343CA3F2356592C005EC399 /* ViewController.swift in Sources */,
 				3343CA3B2356592C005EC399 /* AppDelegate.swift in Sources */,
 				3343CA3D2356592C005EC399 /* SceneDelegate.swift in Sources */,

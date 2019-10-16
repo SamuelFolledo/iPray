@@ -19,15 +19,48 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="detailButton" indentationWidth="10" rowHeight="50" id="qoL-ic-1uD" customClass="SongCell" customModule="Folledo_iPray" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="50"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="songCellID" id="DJz-m0-MLy" customClass="SongCell" customModule="Folledo_iPray" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qoL-ic-1uD" id="VHo-CD-O09">
-                                            <rect key="frame" x="0.0" y="0.0" width="370" height="50"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DJz-m0-MLy" id="D0d-uh-IlQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="i7k-2a-hdm">
+                                                    <rect key="frame" x="10" y="4.5" width="35" height="34.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="i7k-2a-hdm" secondAttribute="height" id="eo3-cd-c8w"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rpo-OV-Lcg">
+                                                    <rect key="frame" x="55" y="4.5" width="349" height="17.5"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="rpo-OV-Lcg" secondAttribute="trailing" constant="10" id="2XP-hm-ZLM"/>
+                                                <constraint firstItem="rpo-OV-Lcg" firstAttribute="leading" secondItem="i7k-2a-hdm" secondAttribute="trailing" constant="10" id="91p-St-rWD"/>
+                                                <constraint firstItem="rpo-OV-Lcg" firstAttribute="height" secondItem="i7k-2a-hdm" secondAttribute="height" multiplier="1:2" id="C1F-bm-SpM"/>
+                                                <constraint firstItem="rpo-OV-Lcg" firstAttribute="top" secondItem="i7k-2a-hdm" secondAttribute="top" id="mQq-zs-U0z"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <constraints>
+                                            <constraint firstItem="i7k-2a-hdm" firstAttribute="height" secondItem="DJz-m0-MLy" secondAttribute="height" multiplier="4:5" id="DoY-7w-d8t"/>
+                                            <constraint firstItem="i7k-2a-hdm" firstAttribute="leading" secondItem="DJz-m0-MLy" secondAttribute="leading" constant="10" id="dYr-bc-S2t"/>
+                                            <constraint firstItem="i7k-2a-hdm" firstAttribute="centerY" secondItem="DJz-m0-MLy" secondAttribute="centerY" id="lU5-QR-zKB"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="songImageView" destination="i7k-2a-hdm" id="EKO-g0-L1y"/>
+                                            <outlet property="songTitleLabel" destination="rpo-OV-Lcg" id="x5j-w3-e6f"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="gui-sm-Zyw"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="jqA-8h-WS4"/>
+                                </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3T3-dj-84f">
                                 <rect key="frame" x="41.5" y="774.5" width="331" height="77.5"/>
