@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		333F84D42357D93D00A60744 /* WhatABeautifulNameItIs.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 333F84CA2357D93D00A60744 /* WhatABeautifulNameItIs.mp3 */; };
+		333F84D52357D93D00A60744 /* RecklessLove-Bethel.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 333F84CB2357D93D00A60744 /* RecklessLove-Bethel.mp3 */; };
+		333F84D62357D93D00A60744 /* UnfailingLove-ChrisTomlin.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 333F84CC2357D93D00A60744 /* UnfailingLove-ChrisTomlin.mp3 */; };
+		333F84D72357D93D00A60744 /* Oceans(long)-Hillsong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 333F84CD2357D93D00A60744 /* Oceans(long)-Hillsong.mp3 */; };
+		333F84D82357D93D00A60744 /* Oceans(short)-Hillsong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 333F84CE2357D93D00A60744 /* Oceans(short)-Hillsong.mp3 */; };
+		333F84D92357D93D00A60744 /* GiveMeFaith-ElevationWorship.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 333F84CF2357D93D00A60744 /* GiveMeFaith-ElevationWorship.mp3 */; };
+		333F84DA2357D93D00A60744 /* LivingHope.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 333F84D02357D93D00A60744 /* LivingHope.mp3 */; };
+		333F84DB2357D93D00A60744 /* NoOneHigher-AaronShust.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 333F84D12357D93D00A60744 /* NoOneHigher-AaronShust.mp3 */; };
+		333F84DC2357D93D00A60744 /* NoLongerSlaves-BethelMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 333F84D22357D93D00A60744 /* NoLongerSlaves-BethelMusic.mp3 */; };
+		333F84DD2357D93D00A60744 /* WhoYouSayIAm-Hillsong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 333F84D32357D93D00A60744 /* WhoYouSayIAm-Hillsong.mp3 */; };
 		3343CA3B2356592C005EC399 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3343CA3A2356592C005EC399 /* AppDelegate.swift */; };
 		3343CA3D2356592C005EC399 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3343CA3C2356592C005EC399 /* SceneDelegate.swift */; };
 		3343CA3F2356592C005EC399 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3343CA3E2356592C005EC399 /* ViewController.swift */; };
@@ -21,7 +31,6 @@
 		3343CA7423565BA0005EC399 /* PrayerTimerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3343CA7323565BA0005EC399 /* PrayerTimerVC.swift */; };
 		3343CA7623565E07005EC399 /* PrayerRequest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3343CA7523565E07005EC399 /* PrayerRequest.storyboard */; };
 		3343CA7823565E18005EC399 /* PrayerTimer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3343CA7723565E18005EC399 /* PrayerTimer.storyboard */; };
-		3371831323578D19004C9489 /* ChristianSongs in Resources */ = {isa = PBXBuildFile; fileRef = 3371831223578D19004C9489 /* ChristianSongs */; };
 		3371831623578DAB004C9489 /* SongCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3371831423578DAB004C9489 /* SongCell.swift */; };
 		337183192357C590004C9489 /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337183182357C590004C9489 /* Questions.swift */; };
 		3371831B2357C77E004C9489 /* SongInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3371831A2357C77E004C9489 /* SongInfo.storyboard */; };
@@ -46,6 +55,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		333F84CA2357D93D00A60744 /* WhatABeautifulNameItIs.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = WhatABeautifulNameItIs.mp3; sourceTree = "<group>"; };
+		333F84CB2357D93D00A60744 /* RecklessLove-Bethel.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "RecklessLove-Bethel.mp3"; sourceTree = "<group>"; };
+		333F84CC2357D93D00A60744 /* UnfailingLove-ChrisTomlin.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "UnfailingLove-ChrisTomlin.mp3"; sourceTree = "<group>"; };
+		333F84CD2357D93D00A60744 /* Oceans(long)-Hillsong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Oceans(long)-Hillsong.mp3"; sourceTree = "<group>"; };
+		333F84CE2357D93D00A60744 /* Oceans(short)-Hillsong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Oceans(short)-Hillsong.mp3"; sourceTree = "<group>"; };
+		333F84CF2357D93D00A60744 /* GiveMeFaith-ElevationWorship.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "GiveMeFaith-ElevationWorship.mp3"; sourceTree = "<group>"; };
+		333F84D02357D93D00A60744 /* LivingHope.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = LivingHope.mp3; sourceTree = "<group>"; };
+		333F84D12357D93D00A60744 /* NoOneHigher-AaronShust.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "NoOneHigher-AaronShust.mp3"; sourceTree = "<group>"; };
+		333F84D22357D93D00A60744 /* NoLongerSlaves-BethelMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "NoLongerSlaves-BethelMusic.mp3"; sourceTree = "<group>"; };
+		333F84D32357D93D00A60744 /* WhoYouSayIAm-Hillsong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "WhoYouSayIAm-Hillsong.mp3"; sourceTree = "<group>"; };
 		3343CA372356592C005EC399 /* Folledo-iPray.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Folledo-iPray.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3343CA3A2356592C005EC399 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3343CA3C2356592C005EC399 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,7 +85,6 @@
 		3343CA7323565BA0005EC399 /* PrayerTimerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerTimerVC.swift; sourceTree = "<group>"; };
 		3343CA7523565E07005EC399 /* PrayerRequest.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PrayerRequest.storyboard; sourceTree = "<group>"; };
 		3343CA7723565E18005EC399 /* PrayerTimer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PrayerTimer.storyboard; sourceTree = "<group>"; };
-		3371831223578D19004C9489 /* ChristianSongs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ChristianSongs; sourceTree = "<group>"; };
 		3371831423578DAB004C9489 /* SongCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongCell.swift; sourceTree = "<group>"; };
 		337183182357C590004C9489 /* Questions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
 		3371831A2357C77E004C9489 /* SongInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SongInfo.storyboard; sourceTree = "<group>"; };
@@ -98,6 +116,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		333F84C92357D93D00A60744 /* ChristianSongs */ = {
+			isa = PBXGroup;
+			children = (
+				333F84CA2357D93D00A60744 /* WhatABeautifulNameItIs.mp3 */,
+				333F84CB2357D93D00A60744 /* RecklessLove-Bethel.mp3 */,
+				333F84CC2357D93D00A60744 /* UnfailingLove-ChrisTomlin.mp3 */,
+				333F84CD2357D93D00A60744 /* Oceans(long)-Hillsong.mp3 */,
+				333F84CE2357D93D00A60744 /* Oceans(short)-Hillsong.mp3 */,
+				333F84CF2357D93D00A60744 /* GiveMeFaith-ElevationWorship.mp3 */,
+				333F84D02357D93D00A60744 /* LivingHope.mp3 */,
+				333F84D12357D93D00A60744 /* NoOneHigher-AaronShust.mp3 */,
+				333F84D22357D93D00A60744 /* NoLongerSlaves-BethelMusic.mp3 */,
+				333F84D32357D93D00A60744 /* WhoYouSayIAm-Hillsong.mp3 */,
+			);
+			path = ChristianSongs;
+			sourceTree = "<group>";
+		};
 		3343CA2E2356592C005EC399 = {
 			isa = PBXGroup;
 			children = (
@@ -128,8 +163,8 @@
 				3343CA6A23565A51005EC399 /* Controllers */,
 				3343CA6D23565A6A005EC399 /* Models */,
 				3343CA6E23565A71005EC399 /* Views */,
+				333F84C92357D93D00A60744 /* ChristianSongs */,
 				3343CA432356592D005EC399 /* Assets.xcassets */,
-				3371831223578D19004C9489 /* ChristianSongs */,
 				3343CA452356592D005EC399 /* LaunchScreen.storyboard */,
 				3343CA482356592D005EC399 /* Info.plist */,
 			);
@@ -321,13 +356,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				333F84D52357D93D00A60744 /* RecklessLove-Bethel.mp3 in Resources */,
 				3343CA7823565E18005EC399 /* PrayerTimer.storyboard in Resources */,
-				3371831323578D19004C9489 /* ChristianSongs in Resources */,
 				3343CA472356592D005EC399 /* LaunchScreen.storyboard in Resources */,
+				333F84DD2357D93D00A60744 /* WhoYouSayIAm-Hillsong.mp3 in Resources */,
 				3343CA442356592D005EC399 /* Assets.xcassets in Resources */,
+				333F84DA2357D93D00A60744 /* LivingHope.mp3 in Resources */,
+				333F84D82357D93D00A60744 /* Oceans(short)-Hillsong.mp3 in Resources */,
+				333F84D62357D93D00A60744 /* UnfailingLove-ChrisTomlin.mp3 in Resources */,
+				333F84D92357D93D00A60744 /* GiveMeFaith-ElevationWorship.mp3 in Resources */,
 				3343CA422356592C005EC399 /* Songs.storyboard in Resources */,
+				333F84DC2357D93D00A60744 /* NoLongerSlaves-BethelMusic.mp3 in Resources */,
+				333F84D72357D93D00A60744 /* Oceans(long)-Hillsong.mp3 in Resources */,
 				3371831B2357C77E004C9489 /* SongInfo.storyboard in Resources */,
 				3343CA7623565E07005EC399 /* PrayerRequest.storyboard in Resources */,
+				333F84D42357D93D00A60744 /* WhatABeautifulNameItIs.mp3 in Resources */,
+				333F84DB2357D93D00A60744 /* NoOneHigher-AaronShust.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

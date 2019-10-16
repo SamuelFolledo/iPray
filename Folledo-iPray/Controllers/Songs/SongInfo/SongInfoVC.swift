@@ -7,11 +7,14 @@
 //
 
 import UIKit
+import AVFoundation
+
 
 class SongInfoVC: UIViewController {
 
 //MARK: Properties
     var song: Song?
+    var songPlayer: AVAudioPlayer?
     
 //MARK: IBOutlets
     
@@ -23,6 +26,16 @@ class SongInfoVC: UIViewController {
         super.viewDidLoad()
         self.title = song!.songTitle
         songImageView.image = song?.songImage
+        
+        print("SONG NAME IS \(song!.songName)")
+        let soundPath = Bundle.main.path(forResource: song!.songName, ofType:"mp3")!
+        let url = URL(fileURLWithPath: soundPath)
+        do {
+            songPlayer = try AVAudioPlayer(contentsOf: url)
+            songPlayer?.play()
+        } catch {
+            print("Couldn't load file = \(error)")
+        }
     }
     
     

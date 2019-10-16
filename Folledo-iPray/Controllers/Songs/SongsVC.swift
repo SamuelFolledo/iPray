@@ -29,12 +29,12 @@ class SongsVC: UIViewController {
     
 //MARK: Private Methods
     func createDataCell() {
-        let song0 = Song.init(songID: "0", songTitle: "Living Hope", songName: "Living Hope.mp3")
-        let song1 = Song.init(songID: "1", songTitle: "Give Me Faith", songName: "Give Me Faith - Elevation Worship.png", image: UIImage(named: "SFLogo")!)
-        let song2 = Song.init(songID: "2", songTitle: "No Longer Slaves", songName: "No Longer Slaves - Bethel Music.mp3", image: UIImage(named: "SFLogo")!)
-        let song3 = Song.init(songID: "3", songTitle: "No One Higher", songName: "No One Higher - Aaron Shust.mp3", image: UIImage(named: "SFLogo")!)
-        let song4 = Song.init(songID: "4", songTitle: "Oceans (long version)", songName: "Oceans (long version) - Hillsong.mp3", image: UIImage(named: "SFLogo")!)
-        let song5 = Song.init(songID: "5", songTitle: "Reckless Love", songName: "Reckless Love - Bethel.mp3", image: UIImage(named: "SFLogo")!)
+        let song0 = Song.init(songID: "0", songTitle: "Living Hope", songName: "LivingHope")
+        let song1 = Song.init(songID: "1", songTitle: "Give Me Faith", songName: "GiveMeFaith-ElevationWorship", image: UIImage(named: "SFLogo")!)
+        let song2 = Song.init(songID: "2", songTitle: "No Longer Slaves", songName: "NoLongerSlaves-BethelMusic", image: UIImage(named: "SFLogo")!)
+        let song3 = Song.init(songID: "3", songTitle: "No One Higher", songName: "NoOneHigher-AaronShust", image: UIImage(named: "SFLogo")!)
+        let song4 = Song.init(songID: "4", songTitle: "Oceans (long version)", songName: "Oceans(long)-Hillsong", image: UIImage(named: "SFLogo")!)
+        let song5 = Song.init(songID: "5", songTitle: "Reckless Love", songName: "RecklessLove-Bethel", image: UIImage(named: "SFLogo")!)
         self.insertRowWithAnimation(row: 0, cell: song0) {
             self.insertRowWithAnimation(row: 1, cell: song1) {
                 self.insertRowWithAnimation(row: 2, cell: song2) {
