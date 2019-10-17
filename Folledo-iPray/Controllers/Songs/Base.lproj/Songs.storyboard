@@ -10,7 +10,7 @@
         <!--Songs-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="SongsVC" customModule="Folledo_iPray" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SongsVC" modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="SongsVC" customModule="Folledo_iPray" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -91,8 +91,8 @@
                     <connections>
                         <outlet property="doneButton" destination="3T3-dj-84f" id="UFV-Z0-Mrh"/>
                         <outlet property="songsTableView" destination="pTI-Zr-O99" id="7NO-3t-prm"/>
-                        <segue destination="aUS-Mg-nWU" kind="presentation" identifier="toRequestIdentifier" modalPresentationStyle="fullScreen" id="4iT-Tb-L0l"/>
                         <segue destination="7ZJ-un-vkY" kind="presentation" identifier="toSongInfoIdentifier" id="E38-jf-s9g"/>
+                        <segue destination="Wsg-kJ-Dx3" kind="show" identifier="toRequestIdentifier" id="OCG-61-YMA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -106,16 +106,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="96r-Ip-a1d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1878" y="-73"/>
-        </scene>
-        <!--PrayerRequest-->
-        <scene sceneID="VWz-VX-Hs4">
-            <objects>
-                <viewControllerPlaceholder storyboardName="PrayerRequest" id="aUS-Mg-nWU" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="StJ-j3-1AC"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="O6e-TV-QZn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1826" y="392"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Wrn-Ra-Zkk">
@@ -134,6 +124,114 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="puW-Ue-Esl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+        <!--Prayer Requests-->
+        <scene sceneID="BF3-Dy-ECd">
+            <objects>
+                <viewController storyboardIdentifier="PrayerRequestVC" modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" id="Wsg-kJ-Dx3" customClass="PrayerRequestVC" customModule="Folledo_iPray" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lF3-pq-Zf2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q0F-eP-wdA" userLabel="request View">
+                                <rect key="frame" x="41.5" y="108" width="331" height="387"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" keyboardDismissMode="interactive" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="kRv-wD-8dM">
+                                        <rect key="frame" x="0.0" y="0.0" width="331" height="387"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="kRv-wD-8dM" firstAttribute="height" secondItem="q0F-eP-wdA" secondAttribute="height" id="5mP-UP-HkB"/>
+                                    <constraint firstItem="kRv-wD-8dM" firstAttribute="centerX" secondItem="q0F-eP-wdA" secondAttribute="centerX" id="HhD-4Q-SP6"/>
+                                    <constraint firstItem="kRv-wD-8dM" firstAttribute="centerY" secondItem="q0F-eP-wdA" secondAttribute="centerY" id="M8V-1b-UAh"/>
+                                    <constraint firstItem="kRv-wD-8dM" firstAttribute="width" secondItem="q0F-eP-wdA" secondAttribute="width" id="sMv-Cm-QON"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jit-B8-BF8">
+                                <rect key="frame" x="41.5" y="774.5" width="331" height="77.5"/>
+                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <state key="normal" title="Skip">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="doneButton:" destination="Wsg-kJ-Dx3" eventType="touchUpInside" id="Utp-d3-sEU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="TyY-0o-vzj" firstAttribute="bottom" secondItem="jit-B8-BF8" secondAttribute="bottom" constant="10" id="DXZ-Iw-hFK"/>
+                            <constraint firstItem="jit-B8-BF8" firstAttribute="width" secondItem="TyY-0o-vzj" secondAttribute="width" multiplier="4:5" id="M4V-BJ-4hL"/>
+                            <constraint firstItem="q0F-eP-wdA" firstAttribute="centerX" secondItem="lF3-pq-Zf2" secondAttribute="centerX" id="ONo-bv-ThG"/>
+                            <constraint firstItem="jit-B8-BF8" firstAttribute="height" secondItem="TyY-0o-vzj" secondAttribute="height" multiplier="1:10" id="PDY-dn-2vm"/>
+                            <constraint firstItem="q0F-eP-wdA" firstAttribute="height" secondItem="TyY-0o-vzj" secondAttribute="height" multiplier="1:2" id="kbR-tu-9Cn"/>
+                            <constraint firstItem="jit-B8-BF8" firstAttribute="centerX" secondItem="TyY-0o-vzj" secondAttribute="centerX" id="lhV-K2-UKM"/>
+                            <constraint firstItem="q0F-eP-wdA" firstAttribute="top" secondItem="TyY-0o-vzj" secondAttribute="top" constant="20" id="vPY-2A-UZV"/>
+                            <constraint firstItem="q0F-eP-wdA" firstAttribute="width" secondItem="TyY-0o-vzj" secondAttribute="width" multiplier="4:5" id="y0o-Gl-Jq2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="TyY-0o-vzj"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Prayer Requests" id="h6d-eA-C8s">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="h2W-gJ-UOd">
+                            <connections>
+                                <action selector="backButtonTapped:" destination="Wsg-kJ-Dx3" id="tO7-01-y2O"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="backButtonTapped" destination="h2W-gJ-UOd" id="p0h-mt-QRh"/>
+                        <outlet property="continueButton" destination="jit-B8-BF8" id="2gU-gR-TG8"/>
+                        <outlet property="requestTextView" destination="kRv-wD-8dM" id="fUD-PN-GNa"/>
+                        <segue destination="dyw-uj-bg1" kind="show" identifier="toTimerIdentifier" id="kkn-Bh-1EN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NcF-ID-5xP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2610" y="139"/>
+        </scene>
+        <!--Timer-->
+        <scene sceneID="bjt-uL-CjW">
+            <objects>
+                <viewController storyboardIdentifier="PrayerTimerVC" modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="dyw-uj-bg1" customClass="PrayerTimerVC" customModule="Folledo_iPray" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dXH-e6-ODk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NjC-E9-QvJ">
+                                <rect key="frame" x="87" y="239" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <viewLayoutGuide key="contentLayoutGuide" id="QAn-bz-PKS"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="xGh-zb-lR4"/>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YGJ-J5-8ht">
+                                <rect key="frame" x="134" y="640" width="113" height="89"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="4Vr-vd-NiD"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Timer" id="uOR-Y5-exG">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="v7F-mR-FbF">
+                            <connections>
+                                <action selector="backButtonTapped:" destination="dyw-uj-bg1" id="WfS-aR-Udj"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="backButton" destination="v7F-mR-FbF" id="PS3-Ba-dxD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S1F-rj-0ep" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3728" y="139"/>
         </scene>
     </scenes>
 </document>
