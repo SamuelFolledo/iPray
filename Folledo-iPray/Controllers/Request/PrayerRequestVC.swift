@@ -12,6 +12,8 @@ class PrayerRequestVC: UIViewController {
 
 //MARK: Properties
     var song: Song?
+    var requests: [String]?
+    
 //MARK: IBOutlets
     @IBOutlet weak var requestTextView: UITextView!
     @IBOutlet weak var backButtonTapped: UIBarButtonItem!
@@ -22,6 +24,12 @@ class PrayerRequestVC: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.title = "Prayer Requests"
+        if self.requestTextView.hasText {
+            continueButton.setTitle("Done", for: .normal)
+        } else {
+            continueButton.setTitle("Skip", for: .normal)
+        }
+        requestTextView.text = "• " //• is option + 8 and ° is option + shift + 8
     }
     
     

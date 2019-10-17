@@ -37,17 +37,16 @@ class SongsVC: UIViewController {
         let song7 = Song.init(songID: "7", songTitle: "Unfailing Love", songArtist: "Chris Tomlin", songPath: "UnfailingLove-ChrisTomlin")
         let song8 = Song.init(songID: "8", songTitle: "What A Beautiful Name It Is", songArtist: "Hillsong", songPath: "WhatABeautifulNameItIs")
         let song9 = Song.init(songID: "9", songTitle: "Who You Say I Am", songArtist: "Hillsong", songPath: "WhoYouSayIAm")
-        
-        self.insertRowWithAnimation(row: 0, cell: song0) {
-            self.insertRowWithAnimation(row: 1, cell: song1) {
-                self.insertRowWithAnimation(row: 2, cell: song2) {
-                    self.insertRowWithAnimation(row: 3, cell: song3) {
-                        self.insertRowWithAnimation(row: 4, cell: song4) {
-                            self.insertRowWithAnimation(row: 5, cell: song5) {
-                                self.insertRowWithAnimation(row: 6, cell: song6) {
-                                    self.insertRowWithAnimation(row: 7, cell: song7) {
-                                        self.insertRowWithAnimation(row: 8, cell: song8) {
-                                            self.insertRowWithAnimation(row: 9, cell: song9) {
+        self.insertRowWithAnimation(row: 0, song: song0) {
+            self.insertRowWithAnimation(row: 1, song: song1) {
+                self.insertRowWithAnimation(row: 2, song: song2) {
+                    self.insertRowWithAnimation(row: 3, song: song3) {
+                        self.insertRowWithAnimation(row: 4, song: song4) {
+                            self.insertRowWithAnimation(row: 5, song: song5) {
+                                self.insertRowWithAnimation(row: 6, song: song6) {
+                                    self.insertRowWithAnimation(row: 7, song: song7) {
+                                        self.insertRowWithAnimation(row: 8, song: song8) {
+                                            self.insertRowWithAnimation(row: 9, song: song9) {
                                             }
                                         }
                                     }
@@ -66,9 +65,9 @@ class SongsVC: UIViewController {
     }
     
 //MARK: Helpers
-    func insertRowWithAnimation(row: Int, cell: Song, completion: @escaping ()-> Void) { //cell animation
+    func insertRowWithAnimation(row: Int, song: Song, completion: @escaping ()-> Void) { //cell animation
         let indexPath = IndexPath(row: row, section: 0)
-        songs.append(cell)
+        songs.append(song)
         songsTableView.insertRows(at: [indexPath], with: .right) //insert rows from right side in 0.2 secs
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
             completion()

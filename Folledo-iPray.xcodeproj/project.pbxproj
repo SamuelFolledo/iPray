@@ -20,7 +20,7 @@
 		3343CA3B2356592C005EC399 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3343CA3A2356592C005EC399 /* AppDelegate.swift */; };
 		3343CA3D2356592C005EC399 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3343CA3C2356592C005EC399 /* SceneDelegate.swift */; };
 		3343CA3F2356592C005EC399 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3343CA3E2356592C005EC399 /* ViewController.swift */; };
-		3343CA422356592C005EC399 /* Songs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3343CA402356592C005EC399 /* Songs.storyboard */; };
+		3343CA422356592C005EC399 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3343CA402356592C005EC399 /* Main.storyboard */; };
 		3343CA442356592D005EC399 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3343CA432356592D005EC399 /* Assets.xcassets */; };
 		3343CA472356592D005EC399 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3343CA452356592D005EC399 /* LaunchScreen.storyboard */; };
 		3343CA522356592D005EC399 /* Folledo_iPrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3343CA512356592D005EC399 /* Folledo_iPrayTests.swift */; };
@@ -67,7 +67,7 @@
 		3343CA3A2356592C005EC399 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3343CA3C2356592C005EC399 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		3343CA3E2356592C005EC399 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3343CA412356592C005EC399 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Songs.storyboard; sourceTree = "<group>"; };
+		3343CA412356592C005EC399 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3343CA432356592D005EC399 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3343CA462356592D005EC399 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3343CA482356592D005EC399 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -156,6 +156,7 @@
 				337183182357C590004C9489 /* Questions.swift */,
 				3343CA3C2356592C005EC399 /* SceneDelegate.swift */,
 				3343CA3E2356592C005EC399 /* ViewController.swift */,
+				3343CA402356592C005EC399 /* Main.storyboard */,
 				3343CA6A23565A51005EC399 /* Controllers */,
 				3343CA6D23565A6A005EC399 /* Models */,
 				3343CA6E23565A71005EC399 /* Views */,
@@ -214,7 +215,6 @@
 		3343CA7923565F86005EC399 /* Songs */ = {
 			isa = PBXGroup;
 			children = (
-				3343CA402356592C005EC399 /* Songs.storyboard */,
 				3343CA6F23565B68005EC399 /* SongsVC.swift */,
 				3371831E2357C79A004C9489 /* SongInfo */,
 			);
@@ -358,7 +358,7 @@
 				333F84D82357D93D00A60744 /* Oceans(short)-Hillsong.mp3 in Resources */,
 				333F84D62357D93D00A60744 /* UnfailingLove-ChrisTomlin.mp3 in Resources */,
 				333F84D92357D93D00A60744 /* GiveMeFaith-ElevationWorship.mp3 in Resources */,
-				3343CA422356592C005EC399 /* Songs.storyboard in Resources */,
+				3343CA422356592C005EC399 /* Main.storyboard in Resources */,
 				333F84DC2357D93D00A60744 /* NoLongerSlaves-BethelMusic.mp3 in Resources */,
 				333F84D72357D93D00A60744 /* Oceans(long)-Hillsong.mp3 in Resources */,
 				3371831B2357C77E004C9489 /* SongInfo.storyboard in Resources */,
@@ -433,12 +433,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		3343CA402356592C005EC399 /* Songs.storyboard */ = {
+		3343CA402356592C005EC399 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				3343CA412356592C005EC399 /* Base */,
 			);
-			name = Songs.storyboard;
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		3343CA452356592D005EC399 /* LaunchScreen.storyboard */ = {
