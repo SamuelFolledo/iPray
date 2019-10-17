@@ -17,17 +17,30 @@ class SongInfoVC: UIViewController {
     var songPlayer: AVAudioPlayer?
     
 //MARK: IBOutlets
-    
     @IBOutlet weak var songImageView: UIImageView!
     @IBOutlet weak var artistLabel: UILabel!
     
 //MARK: LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupView()
+        playSong()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        songPlayer?.stop()
+    }
+    
+    
+//MARK: Private Methods
+    fileprivate func setupView() {
         self.title = song!.songTitle
-        songImageView.image = song?.songImage
-        
-        print("SONG NAME IS \(song!.songName)")
+        songImageView.image = song!.songImage
+        artistLabel.text = song!.songTitle
+    }
+    
+    fileprivate func playSong() {
         let soundPath = Bundle.main.path(forResource: song!.songName, ofType:"mp3")!
         let url = URL(fileURLWithPath: soundPath)
         do {
@@ -37,10 +50,6 @@ class SongInfoVC: UIViewController {
             print("Couldn't load file = \(error)")
         }
     }
-    
-    
-//MARK: Private Methods
-    
 //MARK: IBActions
     
 //MARK: Helpers

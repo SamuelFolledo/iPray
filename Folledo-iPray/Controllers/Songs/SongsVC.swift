@@ -26,7 +26,6 @@ class SongsVC: UIViewController {
         
     }
     
-    
 //MARK: Private Methods
     func createDataCell() {
         let song0 = Song.init(songID: "0", songTitle: "Living Hope", songName: "LivingHope")
@@ -39,7 +38,6 @@ class SongsVC: UIViewController {
         let song7 = Song.init(songID: "7", songTitle: "Unfailing Love", songName: "UnfailingLove-ChrisTomlin")
         let song8 = Song.init(songID: "8", songTitle: "What A Beautiful Name It Is", songName: "WhatABeautifulNameItIs")
         let song9 = Song.init(songID: "9", songTitle: "Who You Say I Am", songName: "WhoYouSayIAm")
-        
         
         self.insertRowWithAnimation(row: 0, cell: song0) {
             self.insertRowWithAnimation(row: 1, cell: song1) {
@@ -62,7 +60,6 @@ class SongsVC: UIViewController {
             }
         }
     }
-    
     
 //MARK: IBActions
     @IBAction func doneButtonTapped(_ sender: Any) {
