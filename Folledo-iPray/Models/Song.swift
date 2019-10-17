@@ -11,18 +11,20 @@ import UIKit
 class Song {
     let songID: String?
     let songTitle: String?//title
-    let songName: String? //name of the song with extension
+    let songArtist: String?
+    let songPath: String? //name of the song with extension
     let songImage: UIImage?
     let songURL: String = ""
     let songLength: Float = 0.0
     let songCategory1: String = ""
     let songCategory2: String = ""
     
-    init(songID: String, songTitle: String, songName: String, image: UIImage = UIImage(named: "SFLogo")!) {
+    init(songID: String, songTitle: String, songArtist: String, songPath: String, image: UIImage = UIImage(named: "SFLogo")!) {
         self.songID = songID
         self.songTitle = songTitle
-        self.songName = songName
+        self.songPath = songPath
         self.songImage = image
+        self.songArtist = songArtist
     }
     
 }

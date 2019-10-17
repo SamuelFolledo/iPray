@@ -19,6 +19,8 @@ class SongInfoVC: UIViewController {
 //MARK: IBOutlets
     @IBOutlet weak var songImageView: UIImageView!
     @IBOutlet weak var artistLabel: UILabel!
+    @IBOutlet weak var categoryLabel: UILabel!
+    @IBOutlet weak var lengthLabel: UILabel!
     
 //MARK: LifeCycle
     override func viewDidLoad() {
@@ -37,11 +39,19 @@ class SongInfoVC: UIViewController {
     fileprivate func setupView() {
         self.title = song!.songTitle
         songImageView.image = song!.songImage
-        artistLabel.text = song!.songTitle
+        if song!.songArtist == nil || song!.songArtist == "" {
+            artistLabel.text = "Unknown Artist"
+        } else { artistLabel.text = song!.songArtist }
+        if song!.songCategory1 == nil || song!.songCategory1 == "" {
+            categoryLabel.text = "Unknown Category"
+        } else { categoryLabel.text = song!.songCategory1 }
+        if song!.songLength == nil || song!.songLength <= 0 {
+            lengthLabel.text = "Unknown Length"
+        } else { lengthLabel.text = "\(song!.songLength)" }
     }
     
     fileprivate func playSong() {
-        let soundPath = Bundle.main.path(forResource: song!.songName, ofType:"mp3")!
+        let soundPath = Bundle.main.path(forResource: song!.songPath, ofType:"mp3")!
         let url = URL(fileURLWithPath: soundPath)
         do {
             songPlayer = try AVAudioPlayer(contentsOf: url)

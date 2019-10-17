@@ -21,6 +21,7 @@ class PrayerRequestVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        self.title = "Prayer Requests"
     }
     
     
@@ -31,7 +32,7 @@ class PrayerRequestVC: UIViewController {
         self.performSegue(withIdentifier: "toTimerIdentifier", sender: nil)
     }
     @IBAction func backButtonTapped(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        navigationController?.popViewController(animated: true)
     }
     
 //MARK: Helpers
