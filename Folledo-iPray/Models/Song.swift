@@ -33,7 +33,9 @@ class Song {
         self.songTitle = dictionary[kSONGTITLE] as? String
         self.songArtist = dictionary[kSONGARTIST] as? String
         self.songPath = dictionary[kSONGPATH] as? String
-        self.songImage = dictionary[kSONGIMAGE] as? UIImage
+        
+        self.songImage =  UIImage(data: dictionary[kSONGIMAGE] as! Data)
+        
         self.songURL = dictionary[kSONGURL] as! String
         self.songLength = dictionary[kSONGLENGTH] as! Float
         self.songCategory1 = dictionary[kSONGCATEGORY1] as! String
@@ -57,7 +59,7 @@ func saveSongLocally(song: Song) { //persistently save song to UserDefaults
 
 func songDictionaryFrom(song: Song) -> NSDictionary { //take a song and return an NSDictionary
     return NSDictionary(
-        objects: [song.songID!, song.songTitle!, song.songArtist!, song.songPath!, song.songImage!, song.songURL, song.songLength, song.songCategory1, song.songLanguage, song.songReligion],
+        objects: [song.songID!, song.songTitle!, song.songArtist!, song.songPath!, song.songImage!.jpegData(compressionQuality: 0.5)!, song.songURL, song.songLength, song.songCategory1, song.songLanguage, song.songReligion],
         forKeys: [kSONGID as NSCopying, kSONGTITLE as NSCopying, kSONGARTIST as NSCopying, kSONGPATH as NSCopying, kSONGIMAGE as NSCopying, kSONGURL as NSCopying, kSONGLENGTH as NSCopying, kSONGCATEGORY1 as NSCopying, kSONGLANGUAGE as NSCopying, kSONGRELIGION as NSCopying])
 }
 

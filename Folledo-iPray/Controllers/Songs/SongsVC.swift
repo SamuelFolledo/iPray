@@ -82,7 +82,8 @@ class SongsVC: UIViewController {
                 print(song.songTitle!)
                 if let nav = segue.destination as? UINavigationController,
                     let vc: PrayerRequestVC = nav.topViewController as? PrayerRequestVC {
-                    vc.song = song
+//                    vc.song = song //since we are saving song to UserDefaults, we don't need this anymore
+                    vc.song = Song.currentSong()
                 }
             } else {
                 print("Skipped! No song is passed")
@@ -115,6 +116,7 @@ extension SongsVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let song = songs[indexPath.row]
+        saveSongLocally(song: song) //save our current song the user selected to UserDefauts
         performSegue(withIdentifier: "toRequestIdentifier", sender: song)
     }
     
