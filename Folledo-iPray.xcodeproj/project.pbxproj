@@ -29,6 +29,7 @@
 		333F850B23584A1F00A60744 /* noOneHigher.png in Resources */ = {isa = PBXBuildFile; fileRef = 333F84F723584A1F00A60744 /* noOneHigher.png */; };
 		333F850C23584A1F00A60744 /* giveMeFaith.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 333F84F823584A1F00A60744 /* giveMeFaith.jpeg */; };
 		333F850D23584A1F00A60744 /* unfailingLove.png in Resources */ = {isa = PBXBuildFile; fileRef = 333F84F923584A1F00A60744 /* unfailingLove.png */; };
+		333F850F2358EAE800A60744 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333F850E2358EAE800A60744 /* Constants.swift */; };
 		3343CA3B2356592C005EC399 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3343CA3A2356592C005EC399 /* AppDelegate.swift */; };
 		3343CA3D2356592C005EC399 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3343CA3C2356592C005EC399 /* SceneDelegate.swift */; };
 		3343CA3F2356592C005EC399 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3343CA3E2356592C005EC399 /* ViewController.swift */; };
@@ -87,6 +88,7 @@
 		333F84F723584A1F00A60744 /* noOneHigher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noOneHigher.png; sourceTree = "<group>"; };
 		333F84F823584A1F00A60744 /* giveMeFaith.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = giveMeFaith.jpeg; sourceTree = "<group>"; };
 		333F84F923584A1F00A60744 /* unfailingLove.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unfailingLove.png; sourceTree = "<group>"; };
+		333F850E2358EAE800A60744 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3343CA372356592C005EC399 /* Folledo-iPray.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Folledo-iPray.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3343CA3A2356592C005EC399 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3343CA3C2356592C005EC399 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				333F84DF235829CF00A60744 /* Service.swift */,
+				333F850E2358EAE800A60744 /* Constants.swift */,
 				333F84E1235829E600A60744 /* Notification.Name+extensions.swift */,
 			);
 			path = Helpers;
@@ -465,6 +468,7 @@
 				3343CA3F2356592C005EC399 /* ViewController.swift in Sources */,
 				3343CA3B2356592C005EC399 /* AppDelegate.swift in Sources */,
 				3371831D2357C793004C9489 /* SongInfoVC.swift in Sources */,
+				333F850F2358EAE800A60744 /* Constants.swift in Sources */,
 				3343CA3D2356592C005EC399 /* SceneDelegate.swift in Sources */,
 				3343CA7023565B68005EC399 /* SongsVC.swift in Sources */,
 				333F84E0235829CF00A60744 /* Service.swift in Sources */,
