@@ -27,16 +27,16 @@ class SongsVC: UIViewController {
     
 //MARK: Private Methods
     func createDataCell() {
-        let song0 = Song.init(songID: "0", songTitle: "Living Hope", songArtist: "Phil Wickham", songPath: "LivingHope")
-        let song1 = Song.init(songID: "1", songTitle: "Give Me Faith", songArtist: "Elevation Worship", songPath: "GiveMeFaith-ElevationWorship", image: UIImage(named: "SFLogo")!)
-        let song2 = Song.init(songID: "2", songTitle: "No Longer Slaves", songArtist: "Bethel Music", songPath: "NoLongerSlaves-BethelMusic", image: UIImage(named: "SFLogo")!)
-        let song3 = Song.init(songID: "3", songTitle: "No One Higher", songArtist: "Aaron Shust", songPath: "NoOneHigher-AaronShust", image: UIImage(named: "SFLogo")!)
-        let song4 = Song.init(songID: "4", songTitle: "Oceans (long version)", songArtist: "Hillsong", songPath: "Oceans(long)-Hillsong", image: UIImage(named: "SFLogo")!)
-        let song5 = Song.init(songID: "5", songTitle: "Reckless Love", songArtist: "Cory Asbury", songPath: "RecklessLove-Bethel", image: UIImage(named: "SFLogo")!)
-        let song6 = Song.init(songID: "6", songTitle: "Oceans (shorter version)", songArtist: "Hillsong", songPath: "Oceans(long)-Hillsong")
-        let song7 = Song.init(songID: "7", songTitle: "Unfailing Love", songArtist: "Chris Tomlin", songPath: "UnfailingLove-ChrisTomlin")
-        let song8 = Song.init(songID: "8", songTitle: "What A Beautiful Name It Is", songArtist: "Hillsong", songPath: "WhatABeautifulNameItIs")
-        let song9 = Song.init(songID: "9", songTitle: "Who You Say I Am", songArtist: "Hillsong", songPath: "WhoYouSayIAm")
+        let song0 = Song.init(songID: "0", songTitle: "Living Hope", songArtist: "Phil Wickham", songPath: "livingHope", image: UIImage(named: "livingHope.png")!)
+        let song1 = Song.init(songID: "1", songTitle: "Give Me Faith", songArtist: "Elevation Worship", songPath: "giveMeFaith-ElevationWorship", image: UIImage(named: "giveMeFaith.jpeg")!)
+        let song2 = Song.init(songID: "2", songTitle: "No Longer Slaves", songArtist: "Bethel Music", songPath: "noLongerSlaves-BethelMusic", image: UIImage(named: "noLongerSlaves.jpg")!)
+        let song3 = Song.init(songID: "3", songTitle: "No One Higher", songArtist: "Aaron Shust", songPath: "noOneHigher-AaronShust", image: UIImage(named: "noOneHigher.png")!)
+        let song4 = Song.init(songID: "4", songTitle: "Oceans (long version)", songArtist: "Hillsong", songPath: "oceans(long)-Hillsong", image: UIImage(named: "oceans(long).png")!)
+        let song5 = Song.init(songID: "5", songTitle: "Reckless Love", songArtist: "Cory Asbury", songPath: "recklessLove-Bethel", image: UIImage(named: "recklessLove.png")!)
+        let song6 = Song.init(songID: "6", songTitle: "Oceans (shorter version)", songArtist: "Hillsong", songPath: "oceans(long)-Hillsong", image: UIImage(named: "oceans(short).png")!)
+        let song7 = Song.init(songID: "7", songTitle: "Unfailing Love", songArtist: "Chris Tomlin", songPath: "unfailingLove-ChrisTomlin", image: UIImage(named: "unfailingLove.png")!)
+        let song8 = Song.init(songID: "8", songTitle: "What A Beautiful Name It Is", songArtist: "Hillsong", songPath: "whatABeautifulNameItIs", image: UIImage(named: "whatABeautifulNameItIs.jpg")!)
+        let song9 = Song.init(songID: "9", songTitle: "Who You Say I Am", songArtist: "Hillsong", songPath: "whoYouSayIAm-Hillsong", image: UIImage(named: "whoYouSayIAm.jpg")!)
         self.insertRowWithAnimation(row: 0, song: song0) {
             self.insertRowWithAnimation(row: 1, song: song1) {
                 self.insertRowWithAnimation(row: 2, song: song2) {
