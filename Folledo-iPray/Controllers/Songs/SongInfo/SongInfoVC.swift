@@ -62,6 +62,9 @@ class SongInfoVC: UIViewController {
     }
 //MARK: IBActions
     
-//MARK: Helpers
+    @IBAction func backButton(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    //MARK: Helpers
 
 }

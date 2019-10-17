@@ -85,7 +85,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="TR0-A3-0aW"/>
                     </view>
-                    <navigationItem key="navigationItem" title="songTitle" id="4YR-eC-SsJ"/>
+                    <navigationItem key="navigationItem" title="songTitle" id="4YR-eC-SsJ">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="K7E-gQ-7Zt">
+                            <connections>
+                                <action selector="backButton:" destination="78L-7j-gHC" id="hHI-h7-Icb"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="artistLabel" destination="gH8-23-xAs" id="8vK-aX-e2L"/>
                         <outlet property="categoryLabel" destination="eom-T2-5Be" id="opJ-8f-ZBp"/>
