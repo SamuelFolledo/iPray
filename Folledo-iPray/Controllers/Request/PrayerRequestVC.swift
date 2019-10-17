@@ -24,12 +24,13 @@ class PrayerRequestVC: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.title = "Prayer Requests"
+        requestTextView.becomeFirstResponder()
         if self.requestTextView.hasText {
             continueButton.setTitle("Done", for: .normal)
         } else {
             continueButton.setTitle("Skip", for: .normal)
         }
-        requestTextView.text = "• " //• is option + 8 and ° is option + shift + 8
+//        requestTextView.text = "• " //• is option + 8 and ° is option + shift + 8
     }
     
     
