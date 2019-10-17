@@ -29,8 +29,6 @@
 		3343CA7023565B68005EC399 /* SongsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3343CA6F23565B68005EC399 /* SongsVC.swift */; };
 		3343CA7223565B90005EC399 /* PrayerRequestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3343CA7123565B90005EC399 /* PrayerRequestVC.swift */; };
 		3343CA7423565BA0005EC399 /* PrayerTimerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3343CA7323565BA0005EC399 /* PrayerTimerVC.swift */; };
-		3343CA7623565E07005EC399 /* PrayerRequest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3343CA7523565E07005EC399 /* PrayerRequest.storyboard */; };
-		3343CA7823565E18005EC399 /* PrayerTimer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3343CA7723565E18005EC399 /* PrayerTimer.storyboard */; };
 		3371831623578DAB004C9489 /* SongCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3371831423578DAB004C9489 /* SongCell.swift */; };
 		337183192357C590004C9489 /* Questions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337183182357C590004C9489 /* Questions.swift */; };
 		3371831B2357C77E004C9489 /* SongInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3371831A2357C77E004C9489 /* SongInfo.storyboard */; };
@@ -83,8 +81,6 @@
 		3343CA6F23565B68005EC399 /* SongsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsVC.swift; sourceTree = "<group>"; };
 		3343CA7123565B90005EC399 /* PrayerRequestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerRequestVC.swift; sourceTree = "<group>"; };
 		3343CA7323565BA0005EC399 /* PrayerTimerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerTimerVC.swift; sourceTree = "<group>"; };
-		3343CA7523565E07005EC399 /* PrayerRequest.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PrayerRequest.storyboard; sourceTree = "<group>"; };
-		3343CA7723565E18005EC399 /* PrayerTimer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PrayerTimer.storyboard; sourceTree = "<group>"; };
 		3371831423578DAB004C9489 /* SongCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongCell.swift; sourceTree = "<group>"; };
 		337183182357C590004C9489 /* Questions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Questions.swift; sourceTree = "<group>"; };
 		3371831A2357C77E004C9489 /* SongInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SongInfo.storyboard; sourceTree = "<group>"; };
@@ -228,7 +224,6 @@
 		3343CA7A23565F99005EC399 /* Request */ = {
 			isa = PBXGroup;
 			children = (
-				3343CA7523565E07005EC399 /* PrayerRequest.storyboard */,
 				3343CA7123565B90005EC399 /* PrayerRequestVC.swift */,
 			);
 			path = Request;
@@ -237,7 +232,6 @@
 		3343CA7B23565FAC005EC399 /* Timer */ = {
 			isa = PBXGroup;
 			children = (
-				3343CA7723565E18005EC399 /* PrayerTimer.storyboard */,
 				3343CA7323565BA0005EC399 /* PrayerTimerVC.swift */,
 			);
 			path = Timer;
@@ -357,7 +351,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				333F84D52357D93D00A60744 /* RecklessLove-Bethel.mp3 in Resources */,
-				3343CA7823565E18005EC399 /* PrayerTimer.storyboard in Resources */,
 				3343CA472356592D005EC399 /* LaunchScreen.storyboard in Resources */,
 				333F84DD2357D93D00A60744 /* WhoYouSayIAm-Hillsong.mp3 in Resources */,
 				3343CA442356592D005EC399 /* Assets.xcassets in Resources */,
@@ -369,7 +362,6 @@
 				333F84DC2357D93D00A60744 /* NoLongerSlaves-BethelMusic.mp3 in Resources */,
 				333F84D72357D93D00A60744 /* Oceans(long)-Hillsong.mp3 in Resources */,
 				3371831B2357C77E004C9489 /* SongInfo.storyboard in Resources */,
-				3343CA7623565E07005EC399 /* PrayerRequest.storyboard in Resources */,
 				333F84D42357D93D00A60744 /* WhatABeautifulNameItIs.mp3 in Resources */,
 				333F84DB2357D93D00A60744 /* NoOneHigher-AaronShust.mp3 in Resources */,
 			);

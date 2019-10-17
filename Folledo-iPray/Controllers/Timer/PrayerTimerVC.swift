@@ -11,6 +11,7 @@ import UIKit
 class PrayerTimerVC: UIViewController {
 
 //MARK: Properties
+    var song: Song?
     
 //MARK: IBOutlets
     @IBOutlet weak var backButton: UIBarButtonItem!
@@ -26,9 +27,9 @@ class PrayerTimerVC: UIViewController {
 //MARK: Private Methods
     
 //MARK: IBActions
-    
     @IBAction func backButtonTapped(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+//        self.dismiss(animated: true, completion: nil)
+        navigationController?.popViewController(animated: true)
     }
     
 //MARK: Helpers
