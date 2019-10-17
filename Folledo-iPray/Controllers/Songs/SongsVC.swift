@@ -23,7 +23,6 @@ class SongsVC: UIViewController {
         super.viewDidLoad()
         createDataCell()
         songsTableView.tableFooterView = UIView() //remove the additional line separator underneath our products
-        
     }
     
 //MARK: Private Methods
@@ -64,7 +63,6 @@ class SongsVC: UIViewController {
 //MARK: IBActions
     @IBAction func doneButtonTapped(_ sender: Any) {
         performSegue(withIdentifier: "toRequestIdentifier", sender: nil)
-        
     }
     
 //MARK: Helpers
@@ -82,6 +80,7 @@ class SongsVC: UIViewController {
         switch segue.identifier {
         case "toRequestIdentifier":
             if let song = sender as? Song {
+                print(song.songTitle!)
                 if let nav = segue.destination as? UINavigationController,
                     let vc: PrayerRequestVC = nav.topViewController as? PrayerRequestVC {
                     vc.song = song
