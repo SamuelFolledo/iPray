@@ -39,6 +39,11 @@ class PrayerRequestVC: UIViewController {
 //        requestTextView.text = "• " //• is option + 8 and ° is option + shift + 8
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        requestTextView.text = UserDefaults.standard.string(forKey: kCURRENTPRAYERREQUEST) //load the text frm kCURRENTPRAYERREQUEST
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil) //add observer for keyboard showing
@@ -49,10 +54,19 @@ class PrayerRequestVC: UIViewController {
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         NotificationCenter.default.removeObserver(self)
+        saveRequestTextView()
     }
     
 //MARK: Private Methods
-    
+    private func saveRequestTextView() {
+        if requestTextView.text == "" {
+            UserDefaults.standard.removeObject(forKey: kCURRENTPRAYERREQUEST)
+            UserDefaults.standard.synchronize()
+        } else {
+            UserDefaults.standard.set(requestTextView.text, forKey: kCURRENTPRAYERREQUEST)
+            UserDefaults.standard.synchronize()
+        }
+    }
 //MARK: IBActions
     @IBAction func doneButton(_ sender: Any) {
         if requestTextView.text == "" {
@@ -134,8 +148,7 @@ extension PrayerRequestVC: UITextViewDelegate {
             UIView.animate(withDuration: 0.5) { //FB ep.14 6mins
                 self.continueButton.setTitle("Continue", for: .normal)
             }
-            UserDefaults.standard.set(textView.text, forKey: kCURRENTPRAYERREQUEST)
-            UserDefaults.standard.synchronize()
+            saveRequestTextView()
         }
     }
 }

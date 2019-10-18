@@ -19,8 +19,6 @@ class PrayerTimerVC: UIViewController {
     var minutesPickerValues: [Int] = [Int]()
     var hoursPickerValues: [Int] = [Int]()
     var seconds: Int = 0
-    var minutes: Int = 0
-    var hours: Int = 0
     var setTime: (hours: Int, minutes: Int, seconds: Int) = (0,0,0)
     
 //MARK: IBOutlets
@@ -51,6 +49,7 @@ class PrayerTimerVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        requestTextView.text = UserDefaults.standard.string(forKey: kCURRENTPRAYERREQUEST) //load the text frm kCURRENTPRAYERREQUEST
         setupSongView()
     }
     
@@ -105,8 +104,6 @@ class PrayerTimerVC: UIViewController {
     private func pauseTimer() {
         timer.invalidate() //stop timer
         timerButton.setTitle("Start", for: .normal)
-//        pickersView.isHidden = false
-//        timeLeftLabel.isHidden = true
         requestTextView.isUserInteractionEnabled = true
         songView.isUserInteractionEnabled = true
         noSongLabel.isUserInteractionEnabled = true
