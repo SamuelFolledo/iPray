@@ -39,12 +39,24 @@ class PrayerTimerVC: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         setupSongView()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case "toSongIdentifier":
+            guard let vc = segue.destination as? SongsVC else { return }
+            vc.isEditingSong = true
+        default:
+            break
+        }
     }
     
 //MARK: Private Methods
     private func toEditSong() {
-        navigationController?.popViewController(animated: true)
+//        navigationController?.popViewController(animated: true)
+        performSegue(withIdentifier: "toSongIdentifier", sender: true)
     }
     
     private func updateTimer() {
@@ -107,7 +119,8 @@ class PrayerTimerVC: UIViewController {
     
 //MARK: Helpers
     @objc func toSongsTap(_ gesture: UITapGestureRecognizer) {
-        navigationController?.popToRootViewController(animated: true)
+        toEditSong()
+//        navigationController?.popToRootViewController(animated: true)
     }
     
     @objc func toRequestTap(_ gesture: UITapGestureRecognizer) {

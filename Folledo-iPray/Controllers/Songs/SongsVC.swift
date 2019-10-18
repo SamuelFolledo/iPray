@@ -64,7 +64,7 @@ class SongsVC: UIViewController {
 //MARK: IBActions
     @IBAction func doneButtonTapped(_ sender: Any) {
         Song.deleteSong()
-        performSegue(withIdentifier: "toRequestIdentifier", sender: nil)
+        goToNextController()
     }
     
 //MARK: Helpers
@@ -74,6 +74,15 @@ class SongsVC: UIViewController {
         songsTableView.insertRows(at: [indexPath], with: .right) //insert rows from right side in 0.2 secs
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
             completion()
+        }
+    }
+    
+    func goToNextController() {
+        if isEditingSong { //if we are editing the song from timerVC, then dismiss
+//            dismiss(animated: true, completion: nil) //will work for modally, but not for push
+            navigationController?.popViewController(animated: true) //this is how you dismiss a push
+        } else { //if isEditingSong is false, we are at at home
+            performSegue(withIdentifier: "toRequestIdentifier", sender: nil)
         }
     }
     
@@ -120,7 +129,7 @@ extension SongsVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let song = songs[indexPath.row]
         saveSongLocally(song: song) //save our current song the user selected to UserDefauts
-        performSegue(withIdentifier: "toRequestIdentifier", sender: song)
+        goToNextController()
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
