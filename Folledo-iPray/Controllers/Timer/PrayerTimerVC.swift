@@ -13,6 +13,8 @@ class PrayerTimerVC: UIViewController {
 //MARK: Properties
     var song: Song?
     var didStartTimer: Bool = false
+    var seconds: Int = 60
+    var timer = Timer()
     
 //MARK: IBOutlets
     @IBOutlet weak var backButton: UIBarButtonItem!
@@ -56,29 +58,46 @@ class PrayerTimerVC: UIViewController {
 //MARK: Private Methods
     private func toEditSong() {
 //        navigationController?.popViewController(animated: true)
+//        guard let songId = Song.currentSong()?.songID else { return }
+//        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "timerStarted"), object: nil, userInfo: [kSONGID : songId])
+//        navigationController?.popToRootViewController(animated: true)
         performSegue(withIdentifier: "toSongIdentifier", sender: true)
     }
     
-    private func updateTimer() {
+    private func toEditRequest() {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    private func updateTimerViews() {
         if !didStartTimer { //start timer
-            timerButton.setTitle("Stop Timer", for: .normal)
-            timerLabel.text = "Time Left"
-            pickersView.isHidden = true
-            timeLeftLabel.isHidden = false
-            requestTextView.isUserInteractionEnabled = false
-            songView.isUserInteractionEnabled = false
-            backButton.isEnabled = false
-            didStartTimer = true
-        } else { //stop timer
-            timerButton.setTitle("Start Timer", for: .normal)
-            timerLabel.text = "Set Timer"
-            pickersView.isHidden = false
-            timeLeftLabel.isHidden = true
-            requestTextView.isUserInteractionEnabled = true
-            songView.isUserInteractionEnabled = true
-            backButton.isEnabled = true
-            didStartTimer = false
+            startTimer()
+        } else { //stopTimer
+            stopTimer()
         }
+    }
+    
+    private func startTimer() {
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.updateTimer), userInfo: nil, repeats: true)
+        timerButton.setTitle("Stop Timer", for: .normal)
+        timerLabel.text = "Time Left"
+        pickersView.isHidden = true
+        timeLeftLabel.isHidden = false
+        requestTextView.isUserInteractionEnabled = false
+        songView.isUserInteractionEnabled = false
+        backButton.isEnabled = false
+        didStartTimer = true
+    }
+    
+    private func stopTimer() {
+        timer.invalidate()
+        timerButton.setTitle("Start Timer", for: .normal)
+        timerLabel.text = "Set Timer"
+        pickersView.isHidden = false
+        timeLeftLabel.isHidden = true
+        requestTextView.isUserInteractionEnabled = true
+        songView.isUserInteractionEnabled = true
+        backButton.isEnabled = true
+        didStartTimer = false
     }
     
     private func setupViews() {
@@ -87,6 +106,10 @@ class PrayerTimerVC: UIViewController {
         timeLeftLabel.isHidden = true
         timeLeftLabel.textColor = kMAINCOLOR
         timerButton.backgroundColor = kMAINCOLOR
+        setupRequestTextView()
+    }
+    
+    private func setupRequestTextView() {
         requestTextView.isEditable = false
         let toRequestTap = UITapGestureRecognizer(target: self, action: #selector(toRequestTap(_:)))
         self.requestTextView.addGestureRecognizer(toRequestTap)
@@ -109,21 +132,26 @@ class PrayerTimerVC: UIViewController {
             songView.isHidden = true
         }
     }
+    
 //MARK: IBActions
     @IBAction func backButtonTapped(_ sender: Any) {       navigationController?.popViewController(animated: true)
     }
     
     @IBAction func timerButtonTapped(_ sender: Any) {
-        updateTimer()
+        updateTimerViews()
     }
     
 //MARK: Helpers
+    @objc func updateTimer() {
+        seconds -= 1
+        timeLeftLabel.text = "\(seconds)"
+    }
+    
     @objc func toSongsTap(_ gesture: UITapGestureRecognizer) {
         toEditSong()
-//        navigationController?.popToRootViewController(animated: true)
     }
     
     @objc func toRequestTap(_ gesture: UITapGestureRecognizer) {
-        navigationController?.popViewController(animated: true)
+        toEditRequest()
     }
 }

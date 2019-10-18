@@ -43,7 +43,7 @@ class PrayerRequestVC: UIViewController {
         super.viewDidAppear(animated)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil) //add observer for keyboard showing
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
-        requestTextView.becomeFirstResponder()
+//        requestTextView.becomeFirstResponder()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
