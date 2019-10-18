@@ -13,6 +13,7 @@ class SongsVC: UIViewController {
 //MARK: Properties
     var songs: [Song] = [Song]()
     let cellID: String = "songCellID"
+    var isEditingSong: Bool = false
     
 //MARK: IBOutlets
     @IBOutlet weak var songsTableView: UITableView!
@@ -62,6 +63,7 @@ class SongsVC: UIViewController {
     
 //MARK: IBActions
     @IBAction func doneButtonTapped(_ sender: Any) {
+        Song.deleteSong()
         performSegue(withIdentifier: "toRequestIdentifier", sender: nil)
     }
     

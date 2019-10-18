@@ -49,6 +49,11 @@ class Song {
         }
         return nil
     }
+    
+    class func deleteSong() { //deletes current song
+        UserDefaults.standard.removeObject(forKey: kCURRENTSONG)
+        UserDefaults.standard.synchronize()
+    }
 }
 
 func saveSongLocally(song: Song) { //persistently save song to UserDefaults

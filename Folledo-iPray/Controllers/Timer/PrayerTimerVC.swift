@@ -28,6 +28,8 @@ class PrayerTimerVC: UIViewController {
     @IBOutlet weak var songArtistLabel: UILabel!
     @IBOutlet weak var songImageView: UIImageView!
     @IBOutlet weak var pickersView: UIView!
+    @IBOutlet weak var noSongLabel: UILabel! //label that will show if user did not pick any song
+    @IBOutlet weak var noSongSelectedLabel: UILabel! //the no song selected label
     
 //MARK: LifeCycle
     override func viewDidLoad() {
@@ -41,7 +43,11 @@ class PrayerTimerVC: UIViewController {
     }
     
 //MARK: Private Methods
-    func updateTimer() {
+    private func toEditSong() {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    private func updateTimer() {
         if !didStartTimer { //start timer
             timerButton.setTitle("Stop Timer", for: .normal)
             timerLabel.text = "Time Left"
@@ -63,10 +69,13 @@ class PrayerTimerVC: UIViewController {
         }
     }
     
-    func setupViews() {
+    private func setupViews() {
         songView.isUserInteractionEnabled = true
         let toSongsTap = UITapGestureRecognizer(target: self, action: #selector(toSongsTap(_:)))
         self.songView.addGestureRecognizer(toSongsTap)
+        noSongLabel.isUserInteractionEnabled = true
+        
+        self.noSongLabel.addGestureRecognizer(toSongsTap)
         timeLeftLabel.isHidden = true
         timeLeftLabel.textColor = kMAINCOLOR
         timerButton.backgroundColor = kMAINCOLOR
@@ -75,12 +84,19 @@ class PrayerTimerVC: UIViewController {
         self.requestTextView.addGestureRecognizer(toRequestTap)
     }
     
-    func setupSongView() {
-        let song = Song.currentSong()
-        songTitleLabel.text = song!.songTitle
-        songArtistLabel.text = song!.songArtist
-        songImageView.image = song!.songImage
-        
+    private func setupSongView() {
+        if let song = Song.currentSong() {
+            songView.isHidden = false
+            noSongLabel.isHidden = true
+            noSongSelectedLabel.isHidden = true
+            songTitleLabel.text = song.songTitle
+            songArtistLabel.text = song.songArtist
+            songImageView.image = song.songImage
+        } else {
+            noSongLabel.isHidden = false
+            noSongSelectedLabel.isHidden = false
+            songView.isHidden = true
+        }
     }
 //MARK: IBActions
     @IBAction func backButtonTapped(_ sender: Any) {       navigationController?.popViewController(animated: true)
