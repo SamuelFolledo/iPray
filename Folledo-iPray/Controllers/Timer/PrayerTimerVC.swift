@@ -24,6 +24,7 @@ class PrayerTimerVC: UIViewController {
     @IBOutlet weak var secondsPicker: UIPickerView!
     @IBOutlet weak var requestTextView: UITextView!
     @IBOutlet weak var timeLeftLabel: UILabel!
+    @IBOutlet weak var cancelTimerButton: UIButton!
     @IBOutlet weak var timerButton: UIButton!
     @IBOutlet weak var songView: UIView!
     @IBOutlet weak var songTitleLabel: UILabel!
@@ -32,6 +33,7 @@ class PrayerTimerVC: UIViewController {
     @IBOutlet weak var pickersView: UIView!
     @IBOutlet weak var noSongLabel: UILabel! //label that will show if user did not pick any song
     @IBOutlet weak var noSongSelectedLabel: UILabel! //the no song selected label
+    
     
 //MARK: LifeCycle
     override func viewDidLoad() {
@@ -73,7 +75,7 @@ class PrayerTimerVC: UIViewController {
     }
     
     private func startTimer() {
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.updateTimer), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.updateTimer), userInfo: nil, repeats: true) //start timer
         timerButton.setTitle("Stop Timer", for: .normal)
         timerLabel.text = "Time Left"
         pickersView.isHidden = true
@@ -86,7 +88,7 @@ class PrayerTimerVC: UIViewController {
     }
     
     private func stopTimer() {
-        timer.invalidate()
+        timer.invalidate() //stop timer
         timerButton.setTitle("Start Timer", for: .normal)
         timerLabel.text = "Set Timer"
         pickersView.isHidden = false
@@ -132,6 +134,11 @@ class PrayerTimerVC: UIViewController {
     }
     
 //MARK: IBActions
+    
+    @IBAction func cancelTimerButtonTapped(_ sender: Any) {
+        print("CANCEL")
+    }
+    
     @IBAction func backButtonTapped(_ sender: Any) {       navigationController?.popViewController(animated: true)
     }
     
