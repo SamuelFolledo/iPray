@@ -14,8 +14,14 @@ class PrayerTimerVC: UIViewController {
     var song: Song?
     var didStartTimer: Bool = false
     var resumeTapped = false
-    var seconds: Int = 180
     var timer = Timer()
+    var secondsPickerValues: [Int] = [Int]()
+    var minutesPickerValues: [Int] = [Int]()
+    var hoursPickerValues: [Int] = [Int]()
+    var seconds: Int = 0
+    var minutes: Int = 0
+    var hours: Int = 0
+    var setTime: (hours: Int, minutes: Int, seconds: Int) = (0,0,0)
     
 //MARK: IBOutlets
     @IBOutlet weak var backButton: UIBarButtonItem!
@@ -76,6 +82,10 @@ class PrayerTimerVC: UIViewController {
     }
     
     private func startTimer() {
+        seconds += setTime.seconds
+        seconds += setTime.minutes * 60
+        seconds += setTime.hours * 3600
+        timeLeftLabel.text = timeString(time: TimeInterval(seconds))
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.updateTimer), userInfo: nil, repeats: true) //start timer
         timerButton.setTitle("Pause", for: .normal)
         timerLabel.text = "Time Left"
@@ -102,7 +112,11 @@ class PrayerTimerVC: UIViewController {
     
     private func resetTimer() {
         timer.invalidate()
-        seconds = 60
+        seconds = 0
+        seconds += setTime.seconds
+        seconds += setTime.minutes * 60
+        seconds += setTime.hours * 3600
+        timeLeftLabel.textColor = kMAINCOLOR
         timeLeftLabel.text = timeString(time: TimeInterval(seconds))
         timerButton.setTitle("Start", for: .normal)
         timerLabel.text = "Set Timer"
@@ -128,7 +142,25 @@ class PrayerTimerVC: UIViewController {
         timeLeftLabel.isHidden = true
         timeLeftLabel.textColor = kMAINCOLOR
         timerButton.backgroundColor = kMAINCOLOR
+        setupPickers()
         setupRequestTextView()
+    }
+    
+    private func setupPickers() {
+        secondsPicker.delegate = self
+        secondsPicker.dataSource = self
+        minutesPicker.delegate = self
+        minutesPicker.dataSource = self
+        hoursPicker.delegate = self
+        hoursPicker.dataSource = self
+        for x in 0..<60 { //populate the values inside the pickers
+            secondsPickerValues.append(x)
+            minutesPickerValues.append(x)
+            if x < 24 {
+                hoursPickerValues.append(x)
+            }
+        }
+        
     }
     
     private func setupRequestTextView() {
@@ -171,11 +203,14 @@ class PrayerTimerVC: UIViewController {
 //MARK: Helpers
     @objc func updateTimer() {
         if seconds < 1 {
-            
+            //stop song here
+            timeLeftLabel.textColor = .red
         } else {
-            seconds -= 1
-            timeLeftLabel.text = timeString(time: TimeInterval(seconds))
+//            seconds -= 1
+//            timeLeftLabel.text = timeString(time: TimeInterval(seconds))
         }
+        seconds -= 1
+        timeLeftLabel.text = timeString(time: TimeInterval(seconds))
     }
     
     @objc func toSongsTap(_ gesture: UITapGestureRecognizer) {
@@ -184,5 +219,50 @@ class PrayerTimerVC: UIViewController {
     
     @objc func toRequestTap(_ gesture: UITapGestureRecognizer) {
         toEditRequest()
+    }
+}
+
+extension PrayerTimerVC: UIPickerViewDelegate, UIPickerViewDataSource {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int { //number of components
+//        return pickerData[component][row]
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int { //number of rows
+        switch pickerView {
+        case secondsPicker:
+            return secondsPickerValues.count
+        case minutesPicker:
+            return minutesPickerValues.count
+        case hoursPicker:
+            return hoursPickerValues.count
+        default:
+            return 1
+        }
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? { //populate the text
+        switch pickerView {
+        case secondsPicker:
+            return String(secondsPickerValues[row])
+        case minutesPicker:
+            return String(minutesPickerValues[row])
+        case hoursPicker:
+            return String(hoursPickerValues[row])
+        default:
+            return ""
+        }
+    }
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        switch pickerView {
+        case secondsPicker:
+            setTime.seconds = secondsPickerValues[row]
+        case minutesPicker:
+            setTime.minutes = minutesPickerValues[row]
+        case hoursPicker:
+            setTime.hours = hoursPickerValues[row]
+        default:
+            seconds = 0
+        }
     }
 }
