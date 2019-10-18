@@ -6,7 +6,7 @@
 //  Copyright © 2019 SamuelFolledo. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 let kSONGID: String = "songID"
 let kSONGTITLE: String = "songTitle"
@@ -25,3 +25,4 @@ let kPRAYERREQUEST: String = "prayerRequest"
 let kCURRENTPRAYER: String = "currentPrayer"
 let kCURRENTREQUEST: String = "currentRequest"
 
+let kMAINCOLOR: UIColor = UIColor(red: 62, green: 183, blue: 194)

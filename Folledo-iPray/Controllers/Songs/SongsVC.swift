@@ -21,6 +21,7 @@ class SongsVC: UIViewController {
 //MARK: LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        doneButton.backgroundColor = kMAINCOLOR
         createDataCell()
         songsTableView.tableFooterView = UIView() //remove the additional line separator underneath our products
     }

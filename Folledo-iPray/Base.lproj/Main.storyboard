@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Songs-->
+        <!--songsVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="SongsVC" modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="SongsVC" customModule="Folledo_iPray" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SongsVC" title="songsVC" modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="SongsVC" customModule="Folledo_iPray" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -93,6 +93,7 @@
                         <outlet property="songsTableView" destination="pTI-Zr-O99" id="7NO-3t-prm"/>
                         <segue destination="7ZJ-un-vkY" kind="presentation" identifier="toSongInfoIdentifier" id="E38-jf-s9g"/>
                         <segue destination="Wsg-kJ-Dx3" kind="show" identifier="toRequestIdentifier" id="OCG-61-YMA"/>
+                        <segue destination="dyw-uj-bg1" kind="presentation" identifier="toTimerIdentifier" id="2Py-jA-IaW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -105,7 +106,7 @@
                 <viewControllerPlaceholder storyboardName="SongInfo" id="7ZJ-un-vkY" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="96r-Ip-a1d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1878" y="-73"/>
+            <point key="canvasLocation" x="1662" y="-390"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Wrn-Ra-Zkk">
@@ -193,7 +194,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NcF-ID-5xP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2610" y="139"/>
+            <point key="canvasLocation" x="2545" y="-320"/>
         </scene>
         <!--Timer-->
         <scene sceneID="bjt-uL-CjW">
@@ -204,37 +205,37 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set Timer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8OA-P8-dfI">
-                                <rect key="frame" x="20.666666666666657" y="54" width="372.66666666666674" height="17.333333333333329"/>
+                                <rect key="frame" x="20.666666666666657" y="9.9999999999999982" width="372.66666666666674" height="18.333333333333329"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9tI-oq-4mf" userLabel="timerScroll View">
-                                <rect key="frame" x="20.666666666666657" y="71.666666666666671" width="372.66666666666674" height="207.66666666666663"/>
+                                <rect key="frame" x="20.666666666666657" y="28.999999999999986" width="372.66666666666674" height="220.66666666666663"/>
                                 <subviews>
                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RtW-eC-PHo" userLabel="hours Picker View">
-                                        <rect key="frame" x="0.0" y="0.0" width="124.33333333333333" height="207.66666666666666"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="124.33333333333333" height="220.66666666666666"/>
                                     </pickerView>
                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Sc-07-vZT" userLabel="minutes Picker View">
-                                        <rect key="frame" x="124.33333333333331" y="0.0" width="124" height="207.66666666666666"/>
+                                        <rect key="frame" x="124.33333333333331" y="0.0" width="124" height="220.66666666666666"/>
                                     </pickerView>
                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VUk-El-9b2" userLabel="seconds Picker View">
-                                        <rect key="frame" x="248.33333333333334" y="0.0" width="124.33333333333334" height="207.66666666666666"/>
+                                        <rect key="frame" x="248.33333333333334" y="0.0" width="124.33333333333334" height="220.66666666666666"/>
                                     </pickerView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hours" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8XO-X5-dl7">
-                                        <rect key="frame" x="0.0" y="95.333333333333329" width="124.33333333333333" height="17"/>
+                                        <rect key="frame" x="0.0" y="101.66666666666666" width="124.33333333333333" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="min" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BId-5y-58P">
-                                        <rect key="frame" x="124.33333333333331" y="95.333333333333329" width="124" height="17"/>
+                                        <rect key="frame" x="124.33333333333331" y="101.66666666666666" width="124" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sec" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="imQ-s6-GJn">
-                                        <rect key="frame" x="248.33333333333334" y="95.333333333333329" width="124.33333333333334" height="17"/>
+                                        <rect key="frame" x="248.33333333333334" y="101.66666666666666" width="124.33333333333334" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -269,13 +270,13 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prayer Requests" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uAw-1y-Vm5">
-                                <rect key="frame" x="20.666666666666657" y="304.33333333333331" width="372.66666666666674" height="17.333333333333314"/>
+                                <rect key="frame" x="20.666666666666657" y="274.66666666666669" width="372.66666666666674" height="18.333333333333314"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="FVU-Zi-Ttl" userLabel="requests Text View">
-                                <rect key="frame" x="20.666666666666657" y="322.33333333333331" width="372.66666666666674" height="207.33333333333331"/>
+                                <rect key="frame" x="20.666666666666657" y="295" width="372.66666666666674" height="221"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -283,7 +284,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YGJ-J5-8ht">
-                                <rect key="frame" x="20.666666666666657" y="558.66666666666663" width="372.66666666666674" height="69.333333333333371"/>
+                                <rect key="frame" x="20.666666666666657" y="545" width="372.66666666666674" height="73.666666666666629"/>
                                 <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <state key="normal" title="Start Timer">
@@ -294,26 +295,26 @@
                                     <action selector="timerButtonTapped:" destination="dyw-uj-bg1" eventType="touchUpInside" id="Vxd-bN-h43"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="Oyi-f3-fWB">
-                                <rect key="frame" x="20.666666666666657" y="648" width="372.66666666666674" height="78"/>
+                            <view contentMode="scaleToFill" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="Oyi-f3-fWB" userLabel="songView">
+                                <rect key="frame" x="20.666666666666657" y="638.66666666666663" width="372.66666666666674" height="87.333333333333371"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rsG-Ip-lID">
-                                        <rect key="frame" x="294.66666666666663" y="0.0" width="78" height="78"/>
+                                        <rect key="frame" x="302.66666666666663" y="8.6666666666667425" width="70" height="70"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="rsG-Ip-lID" secondAttribute="height" id="q78-2X-Lwj"/>
                                         </constraints>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="YmZ-GY-352">
-                                        <rect key="frame" x="0.0" y="0.0" width="62" height="78"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="62" height="87.333333333333329"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dkI-yM-rpN">
-                                                <rect key="frame" x="0.0" y="0.0" width="37.333333333333336" height="38"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="37.333333333333336" height="42.666666666666664"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eqH-7O-lqK">
-                                                <rect key="frame" x="0.0" y="40" width="40.666666666666664" height="38"/>
+                                                <rect key="frame" x="0.0" y="44.666666666666742" width="40.666666666666664" height="42.666666666666657"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -321,16 +322,16 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="UL3-Sm-ckq" userLabel="songValues Stack View">
-                                        <rect key="frame" x="62" y="0.0" width="310.66666666666669" height="78"/>
+                                        <rect key="frame" x="62" y="0.0" width="310.66666666666669" height="87.333333333333329"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="songTitleLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aGn-jR-Jgo">
-                                                <rect key="frame" x="0.0" y="0.0" width="310.66666666666669" height="35"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="310.66666666666669" height="39.666666666666664"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="songArtistLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mLv-Fq-LSc">
-                                                <rect key="frame" x="0.0" y="43" width="310.66666666666669" height="35"/>
+                                                <rect key="frame" x="0.0" y="47.666666666666742" width="310.66666666666669" height="39.666666666666657"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -355,13 +356,13 @@
                                     <constraint firstItem="UL3-Sm-ckq" firstAttribute="leading" secondItem="YmZ-GY-352" secondAttribute="trailing" id="Qd5-O4-yLY"/>
                                     <constraint firstItem="YmZ-GY-352" firstAttribute="centerY" secondItem="Oyi-f3-fWB" secondAttribute="centerY" id="qFK-U3-GF8"/>
                                     <constraint firstItem="UL3-Sm-ckq" firstAttribute="width" secondItem="Oyi-f3-fWB" secondAttribute="width" multiplier="5:6" id="qKB-9Z-Eu0"/>
-                                    <constraint firstItem="rsG-Ip-lID" firstAttribute="height" secondItem="Oyi-f3-fWB" secondAttribute="height" id="wPG-bd-GUH"/>
+                                    <constraint firstItem="rsG-Ip-lID" firstAttribute="height" secondItem="Oyi-f3-fWB" secondAttribute="height" multiplier="4:5" id="wPG-bd-GUH"/>
                                     <constraint firstItem="YmZ-GY-352" firstAttribute="leading" secondItem="Oyi-f3-fWB" secondAttribute="leading" id="x8G-SI-uiy"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DqV-Ux-K9n" userLabel="timeLeftLabel">
-                                <rect key="frame" x="20.666666666666657" y="71.666666666666671" width="372.66666666666674" height="207.66666666666663"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="60"/>
+                                <rect key="frame" x="20.666666666666657" y="28.999999999999986" width="372.66666666666674" height="220.66666666666663"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="65"/>
                                 <color key="textColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -378,7 +379,7 @@
                             <constraint firstItem="9tI-oq-4mf" firstAttribute="top" secondItem="8OA-P8-dfI" secondAttribute="bottom" constant="0.5" id="GJB-RK-ktP"/>
                             <constraint firstItem="9tI-oq-4mf" firstAttribute="height" secondItem="4Vr-vd-NiD" secondAttribute="height" multiplier="3:10" id="HhS-jL-c4H"/>
                             <constraint firstItem="YGJ-J5-8ht" firstAttribute="width" secondItem="FVU-Zi-Ttl" secondAttribute="width" id="Hu4-EO-sP5"/>
-                            <constraint firstItem="FVU-Zi-Ttl" firstAttribute="top" secondItem="uAw-1y-Vm5" secondAttribute="bottom" constant="0.5" id="JlU-gM-o6T"/>
+                            <constraint firstItem="FVU-Zi-Ttl" firstAttribute="top" secondItem="uAw-1y-Vm5" secondAttribute="bottom" constant="2" id="JlU-gM-o6T"/>
                             <constraint firstItem="Oyi-f3-fWB" firstAttribute="bottom" secondItem="4Vr-vd-NiD" secondAttribute="bottom" constant="-10" id="NGP-Gj-c1F"/>
                             <constraint firstItem="FVU-Zi-Ttl" firstAttribute="height" secondItem="9tI-oq-4mf" secondAttribute="height" id="PfS-M1-Ahq"/>
                             <constraint firstItem="Oyi-f3-fWB" firstAttribute="centerX" secondItem="YGJ-J5-8ht" secondAttribute="centerX" id="Qnl-5w-PRs"/>
@@ -411,18 +412,24 @@
                         <outlet property="backButton" destination="v7F-mR-FbF" id="PS3-Ba-dxD"/>
                         <outlet property="hoursPicker" destination="RtW-eC-PHo" id="IUd-VI-Lds"/>
                         <outlet property="minutesPicker" destination="1Sc-07-vZT" id="fr3-gn-TLK"/>
+                        <outlet property="pickersView" destination="9tI-oq-4mf" id="NRI-y1-Sot"/>
                         <outlet property="requestTextView" destination="FVU-Zi-Ttl" id="RdL-0Y-jrq"/>
                         <outlet property="secondsPicker" destination="VUk-El-9b2" id="ROf-TE-WPG"/>
                         <outlet property="songArtistLabel" destination="mLv-Fq-LSc" id="H61-0s-EW9"/>
                         <outlet property="songImageView" destination="rsG-Ip-lID" id="Sff-Y0-EP6"/>
                         <outlet property="songTitleLabel" destination="aGn-jR-Jgo" id="cei-wQ-xBa"/>
+                        <outlet property="songView" destination="Oyi-f3-fWB" id="nLB-OV-eKC"/>
                         <outlet property="timeLeftLabel" destination="DqV-Ux-K9n" id="bDe-UP-GGm"/>
                         <outlet property="timerButton" destination="YGJ-J5-8ht" id="qg2-EK-8es"/>
+                        <outlet property="timerLabel" destination="8OA-P8-dfI" id="ugM-Nm-C9J"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S1F-rj-0ep" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3727.5362318840585" y="138.58695652173915"/>
+            <point key="canvasLocation" x="2545" y="500"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="2Py-jA-IaW"/>
+    </inferredMetricsTieBreakers>
 </document>

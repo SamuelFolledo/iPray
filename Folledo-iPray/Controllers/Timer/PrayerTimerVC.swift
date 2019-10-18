@@ -12,39 +12,84 @@ class PrayerTimerVC: UIViewController {
 
 //MARK: Properties
     var song: Song?
+    var didStartTimer: Bool = false
     
 //MARK: IBOutlets
     @IBOutlet weak var backButton: UIBarButtonItem!
+    @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var hoursPicker: UIPickerView!
     @IBOutlet weak var minutesPicker: UIPickerView!
     @IBOutlet weak var secondsPicker: UIPickerView!
     @IBOutlet weak var requestTextView: UITextView!
     @IBOutlet weak var timeLeftLabel: UILabel!
     @IBOutlet weak var timerButton: UIButton!
+    @IBOutlet weak var songView: UIView!
     @IBOutlet weak var songTitleLabel: UILabel!
     @IBOutlet weak var songArtistLabel: UILabel!
-    
     @IBOutlet weak var songImageView: UIImageView!
+    @IBOutlet weak var pickersView: UIView!
     
 //MARK: LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        let song = Song.currentSong()
-        songImageView.image = song?.songImage
+        setupViews()
+        
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        setupSongView()
+    }
     
 //MARK: Private Methods
+    func updateTimer() {
+        if !didStartTimer { //start timer
+            timerButton.setTitle("Stop Timer", for: .normal)
+            timerLabel.text = "Time Left"
+            pickersView.isHidden = true
+            timeLeftLabel.isHidden = false
+            requestTextView.isUserInteractionEnabled = false
+            songView.isUserInteractionEnabled = false
+            backButton.isEnabled = false
+            didStartTimer = true
+        } else { //stop timer
+            timerButton.setTitle("Start Timer", for: .normal)
+            timerLabel.text = "Set Timer"
+            pickersView.isHidden = false
+            timeLeftLabel.isHidden = true
+            requestTextView.isUserInteractionEnabled = true
+            songView.isUserInteractionEnabled = true
+            backButton.isEnabled = true
+            didStartTimer = false
+        }
+    }
     
+    func setupViews() {
+        songView.isUserInteractionEnabled = true
+        let songTap = UITapGestureRecognizer(target: self, action: #selector(toSongTap(_:)))
+        self.songView.addGestureRecognizer(songTap)
+        timeLeftLabel.isHidden = true
+        timeLeftLabel.textColor = kMAINCOLOR
+        timerButton.backgroundColor = kMAINCOLOR
+        requestTextView.isEditable = false
+    }
+    
+    func setupSongView() {
+        let song = Song.currentSong()
+        songTitleLabel.text = song!.songTitle
+        songArtistLabel.text = song!.songArtist
+        songImageView.image = song!.songImage
+        
+    }
 //MARK: IBActions
     @IBAction func backButtonTapped(_ sender: Any) {       navigationController?.popViewController(animated: true)
     }
     
     @IBAction func timerButtonTapped(_ sender: Any) {
-    
+        updateTimer()
     }
     
 //MARK: Helpers
-
+    @objc func toSongTap(_ gesture: UITapGestureRecognizer) {
+        navigationController?.popToRootViewController(animated: true)
+    }
 }
