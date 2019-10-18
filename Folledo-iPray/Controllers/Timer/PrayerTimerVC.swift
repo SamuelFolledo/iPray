@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import AVFoundation
 
 class PrayerTimerVC: UIViewController {
 
 //MARK: Properties
     var song: Song?
+    var songPlayer: AVAudioPlayer?
     var didStartTimer: Bool = false
     var didResumeTimer = false
     var timer = Timer()
@@ -44,7 +46,6 @@ class PrayerTimerVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -53,6 +54,12 @@ class PrayerTimerVC: UIViewController {
         setupSongView()
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        songPlayer?.stop()
+    }
+    
+//MARK: Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier {
         case "toSongIdentifier":
@@ -64,15 +71,15 @@ class PrayerTimerVC: UIViewController {
     }
     
 //MARK: Private Methods
-    private func toEditSong() {
+    fileprivate func toEditSong() {
         performSegue(withIdentifier: "toSongIdentifier", sender: true)
     }
     
-    private func toEditRequest() {
+    fileprivate func toEditRequest() {
         navigationController?.popViewController(animated: true)
     }
     
-    private func updateTimerViews() {
+    fileprivate func updateTimerViews() {
         if !didStartTimer { //start timer
             startTimer()
         } else { //stopTimer
@@ -80,14 +87,14 @@ class PrayerTimerVC: UIViewController {
         }
     }
     
-    private func startTimer() {
-        if !didResumeTimer {
+    fileprivate func startTimer() {
+        if !didResumeTimer { //checks if we have started the timer before, if not then add the setTime to seconds
             seconds += setTime.seconds
             seconds += setTime.minutes * 60
             seconds += setTime.hours * 3600
             didResumeTimer = true
         }
-        
+        playSong()
         timeLeftLabel.text = timeString(time: TimeInterval(seconds))
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.updateTimer), userInfo: nil, repeats: true) //start timer
         timerButton.setTitle("Pause", for: .normal)
@@ -101,7 +108,8 @@ class PrayerTimerVC: UIViewController {
         didStartTimer = true
     }
     
-    private func pauseTimer() {
+    fileprivate func pauseTimer() {
+        songPlayer?.pause() //just pause the song
         timer.invalidate() //stop timer
         timerButton.setTitle("Start", for: .normal)
         requestTextView.isUserInteractionEnabled = true
@@ -111,8 +119,9 @@ class PrayerTimerVC: UIViewController {
         didStartTimer = false
     }
     
-    private func resetTimer() {
-        timer.invalidate()
+    fileprivate func resetTimer() {
+        songPlayer?.stop() //stop song
+        timer.invalidate() //stop timer
         seconds = 0
         didResumeTimer = false
         timeLeftLabel.textColor = kMAINCOLOR
@@ -128,14 +137,25 @@ class PrayerTimerVC: UIViewController {
         didStartTimer = false
     }
     
-    private func timeString(time:TimeInterval) -> String { //method that will take a timer interval or int and return a string with the formatted time, which the updateTimer objc method will call
+    fileprivate func timeString(time:TimeInterval) -> String { //method that will take a timer interval or int and return a string with the formatted time, which the updateTimer objc method will call
         let hours = Int(time) / 3600
         let minutes = Int(time) / 60 % 60
         let seconds = Int(time) % 60
         return String(format:"%02i:%02i:%02i", hours, minutes, seconds)
     }
     
-    private func setupViews() {
+    fileprivate func playSong() {
+        let soundPath = Bundle.main.path(forResource: song!.songPath, ofType:"mp3")!
+        let url = URL(fileURLWithPath: soundPath)
+        do {
+            songPlayer = try AVAudioPlayer(contentsOf: url)
+            songPlayer?.play()
+        } catch {
+            print("Couldn't load file = \(error)")
+        }
+    }
+    
+    fileprivate func setupViews() {
         songView.isUserInteractionEnabled = true
         noSongLabel.isUserInteractionEnabled = true
         timeLeftLabel.isHidden = true
@@ -145,7 +165,7 @@ class PrayerTimerVC: UIViewController {
         setupRequestTextView()
     }
     
-    private func setupPickers() {
+    fileprivate func setupPickers() {
         secondsPicker.delegate = self
         secondsPicker.dataSource = self
         minutesPicker.delegate = self
@@ -162,15 +182,16 @@ class PrayerTimerVC: UIViewController {
         
     }
     
-    private func setupRequestTextView() {
+    fileprivate func setupRequestTextView() {
         requestTextView.isEditable = false
         let toRequestTap = UITapGestureRecognizer(target: self, action: #selector(toRequestTap(_:)))
         self.requestTextView.addGestureRecognizer(toRequestTap)
     }
     
-    private func setupSongView() {
+    fileprivate func setupSongView() {
+        self.song = Song.currentSong()
         let toSongsTap = UITapGestureRecognizer(target: self, action: #selector(toSongsTap(_:)))
-        if let song = Song.currentSong() {
+        if let song = song {
             songView.isHidden = false
             songView.addGestureRecognizer(toSongsTap)
             noSongLabel.isHidden = true
@@ -192,7 +213,8 @@ class PrayerTimerVC: UIViewController {
         resetTimer()
     }
     
-    @IBAction func backButtonTapped(_ sender: UIButton) {       navigationController?.popViewController(animated: true)
+    @IBAction func backButtonTapped(_ sender: UIButton) {
+        navigationController?.popViewController(animated: true)
     }
     
     @IBAction func timerButtonTapped(_ sender: UIButton) {
@@ -202,7 +224,7 @@ class PrayerTimerVC: UIViewController {
 //MARK: Helpers
     @objc func updateTimer() {
         if seconds < 1 {
-            //stop song here
+            songPlayer?.stop()
             timeLeftLabel.textColor = .red
         } else {
 //            seconds -= 1
@@ -221,6 +243,7 @@ class PrayerTimerVC: UIViewController {
     }
 }
 
+//MARK: UIPickerView extension
 extension PrayerTimerVC: UIPickerViewDelegate, UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int { //number of components
 //        return pickerData[component][row]
