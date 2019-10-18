@@ -199,6 +199,13 @@
 			path = extensions;
 			sourceTree = "<group>";
 		};
+		333F8515235A623700A60744 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3343CA2E2356592C005EC399 = {
 			isa = PBXGroup;
 			children = (
@@ -206,6 +213,7 @@
 				3343CA502356592D005EC399 /* Folledo-iPrayTests */,
 				3343CA5B2356592D005EC399 /* Folledo-iPrayUITests */,
 				3343CA382356592C005EC399 /* Products */,
+				333F8515235A623700A60744 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -655,12 +663,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 30;
 				DEVELOPMENT_TEAM = 9NY68F4K3P;
 				INFOPLIST_FILE = "Folledo-iPray/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "SamuelFolledo.Folledo-iPray";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -673,12 +683,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 30;
 				DEVELOPMENT_TEAM = 9NY68F4K3P;
 				INFOPLIST_FILE = "Folledo-iPray/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "SamuelFolledo.Folledo-iPray";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
