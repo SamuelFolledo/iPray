@@ -13,7 +13,7 @@ class PrayerTimerVC: UIViewController {
 //MARK: Properties
     var song: Song?
     var didStartTimer: Bool = false
-    var resumeTapped = false
+    var didResumeTimer = false
     var timer = Timer()
     var secondsPickerValues: [Int] = [Int]()
     var minutesPickerValues: [Int] = [Int]()
@@ -82,9 +82,13 @@ class PrayerTimerVC: UIViewController {
     }
     
     private func startTimer() {
-        seconds += setTime.seconds
-        seconds += setTime.minutes * 60
-        seconds += setTime.hours * 3600
+        if !didResumeTimer {
+            seconds += setTime.seconds
+            seconds += setTime.minutes * 60
+            seconds += setTime.hours * 3600
+            didResumeTimer = true
+        }
+        
         timeLeftLabel.text = timeString(time: TimeInterval(seconds))
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.updateTimer), userInfo: nil, repeats: true) //start timer
         timerButton.setTitle("Pause", for: .normal)
@@ -113,9 +117,7 @@ class PrayerTimerVC: UIViewController {
     private func resetTimer() {
         timer.invalidate()
         seconds = 0
-        seconds += setTime.seconds
-        seconds += setTime.minutes * 60
-        seconds += setTime.hours * 3600
+        didResumeTimer = false
         timeLeftLabel.textColor = kMAINCOLOR
         timeLeftLabel.text = timeString(time: TimeInterval(seconds))
         timerButton.setTitle("Start", for: .normal)

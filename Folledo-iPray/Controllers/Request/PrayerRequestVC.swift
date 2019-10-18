@@ -55,6 +55,10 @@ class PrayerRequestVC: UIViewController {
     
 //MARK: IBActions
     @IBAction func doneButton(_ sender: Any) {
+        if requestTextView.text == "" {
+            UserDefaults.standard.removeObject(forKey: kCURRENTPRAYERREQUEST)
+            UserDefaults.standard.synchronize()
+        }
         self.performSegue(withIdentifier: "toTimerIdentifier", sender: nil)
     }
     @IBAction func backButtonTapped(_ sender: Any) {
@@ -130,6 +134,8 @@ extension PrayerRequestVC: UITextViewDelegate {
             UIView.animate(withDuration: 0.5) { //FB ep.14 6mins
                 self.continueButton.setTitle("Continue", for: .normal)
             }
+            UserDefaults.standard.set(textView.text, forKey: kCURRENTPRAYERREQUEST)
+            UserDefaults.standard.synchronize()
         }
     }
 }

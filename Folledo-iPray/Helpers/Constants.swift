@@ -22,7 +22,7 @@ let kCURRENTSONG: String = "currentSong"
 
 let kPRAYER: String = "prayer"
 let kPRAYERREQUEST: String = "prayerRequest"
-let kCURRENTPRAYER: String = "currentPrayer"
-let kCURRENTREQUEST: String = "currentRequest"
+//let kCURRENTPRAYER: String = "currentPrayer"
+let kCURRENTPRAYERREQUEST: String = "currentPrayerRequest"
 
 let kMAINCOLOR: UIColor = UIColor(red: 62, green: 183, blue: 194)
