@@ -71,11 +71,7 @@ class PrayerTimerVC: UIViewController {
     
     private func setupViews() {
         songView.isUserInteractionEnabled = true
-        let toSongsTap = UITapGestureRecognizer(target: self, action: #selector(toSongsTap(_:)))
-        self.songView.addGestureRecognizer(toSongsTap)
         noSongLabel.isUserInteractionEnabled = true
-        
-        self.noSongLabel.addGestureRecognizer(toSongsTap)
         timeLeftLabel.isHidden = true
         timeLeftLabel.textColor = kMAINCOLOR
         timerButton.backgroundColor = kMAINCOLOR
@@ -85,8 +81,10 @@ class PrayerTimerVC: UIViewController {
     }
     
     private func setupSongView() {
+        let toSongsTap = UITapGestureRecognizer(target: self, action: #selector(toSongsTap(_:)))
         if let song = Song.currentSong() {
             songView.isHidden = false
+            songView.addGestureRecognizer(toSongsTap)
             noSongLabel.isHidden = true
             noSongSelectedLabel.isHidden = true
             songTitleLabel.text = song.songTitle
@@ -94,6 +92,7 @@ class PrayerTimerVC: UIViewController {
             songImageView.image = song.songImage
         } else {
             noSongLabel.isHidden = false
+            noSongLabel.addGestureRecognizer(toSongsTap)
             noSongSelectedLabel.isHidden = false
             songView.isHidden = true
         }
