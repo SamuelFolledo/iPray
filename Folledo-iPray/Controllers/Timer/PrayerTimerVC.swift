@@ -13,7 +13,8 @@ class PrayerTimerVC: UIViewController {
 //MARK: Properties
     var song: Song?
     var didStartTimer: Bool = false
-    var seconds: Int = 60
+    var resumeTapped = false
+    var seconds: Int = 180
     var timer = Timer()
     
 //MARK: IBOutlets
@@ -24,7 +25,7 @@ class PrayerTimerVC: UIViewController {
     @IBOutlet weak var secondsPicker: UIPickerView!
     @IBOutlet weak var requestTextView: UITextView!
     @IBOutlet weak var timeLeftLabel: UILabel!
-    @IBOutlet weak var cancelTimerButton: UIButton!
+    @IBOutlet weak var resetTimerButton: UIButton!
     @IBOutlet weak var timerButton: UIButton!
     @IBOutlet weak var songView: UIView!
     @IBOutlet weak var songTitleLabel: UILabel!
@@ -70,13 +71,13 @@ class PrayerTimerVC: UIViewController {
         if !didStartTimer { //start timer
             startTimer()
         } else { //stopTimer
-            stopTimer()
+            pauseTimer()
         }
     }
     
     private func startTimer() {
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.updateTimer), userInfo: nil, repeats: true) //start timer
-        timerButton.setTitle("Stop Timer", for: .normal)
+        timerButton.setTitle("Pause", for: .normal)
         timerLabel.text = "Time Left"
         pickersView.isHidden = true
         timeLeftLabel.isHidden = false
@@ -87,9 +88,23 @@ class PrayerTimerVC: UIViewController {
         didStartTimer = true
     }
     
-    private func stopTimer() {
+    private func pauseTimer() {
         timer.invalidate() //stop timer
-        timerButton.setTitle("Start Timer", for: .normal)
+        timerButton.setTitle("Start", for: .normal)
+//        pickersView.isHidden = false
+//        timeLeftLabel.isHidden = true
+        requestTextView.isUserInteractionEnabled = true
+        songView.isUserInteractionEnabled = true
+        noSongLabel.isUserInteractionEnabled = true
+        backButton.isEnabled = true
+        didStartTimer = false
+    }
+    
+    private func resetTimer() {
+        timer.invalidate()
+        seconds = 60
+        timeLeftLabel.text = timeString(time: TimeInterval(seconds))
+        timerButton.setTitle("Start", for: .normal)
         timerLabel.text = "Set Timer"
         pickersView.isHidden = false
         timeLeftLabel.isHidden = true
@@ -98,6 +113,13 @@ class PrayerTimerVC: UIViewController {
         noSongLabel.isUserInteractionEnabled = true
         backButton.isEnabled = true
         didStartTimer = false
+    }
+    
+    private func timeString(time:TimeInterval) -> String { //method that will take a timer interval or int and return a string with the formatted time, which the updateTimer objc method will call
+        let hours = Int(time) / 3600
+        let minutes = Int(time) / 60 % 60
+        let seconds = Int(time) % 60
+        return String(format:"%02i:%02i:%02i", hours, minutes, seconds)
     }
     
     private func setupViews() {
@@ -135,21 +157,25 @@ class PrayerTimerVC: UIViewController {
     
 //MARK: IBActions
     
-    @IBAction func cancelTimerButtonTapped(_ sender: Any) {
-        print("CANCEL")
+    @IBAction func resetTimerButtonTapped(_ sender: UIButton) {
+        resetTimer()
     }
     
-    @IBAction func backButtonTapped(_ sender: Any) {       navigationController?.popViewController(animated: true)
+    @IBAction func backButtonTapped(_ sender: UIButton) {       navigationController?.popViewController(animated: true)
     }
     
-    @IBAction func timerButtonTapped(_ sender: Any) {
+    @IBAction func timerButtonTapped(_ sender: UIButton) {
         updateTimerViews()
     }
     
 //MARK: Helpers
     @objc func updateTimer() {
-        seconds -= 1
-        timeLeftLabel.text = "\(seconds)"
+        if seconds < 1 {
+            
+        } else {
+            seconds -= 1
+            timeLeftLabel.text = timeString(time: TimeInterval(seconds))
+        }
     }
     
     @objc func toSongsTap(_ gesture: UITapGestureRecognizer) {

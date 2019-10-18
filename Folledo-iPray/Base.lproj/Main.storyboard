@@ -289,11 +289,11 @@
                                         <rect key="frame" x="0.0" y="0.0" width="166.33333333333334" height="73.666666666666671"/>
                                         <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
-                                        <state key="normal" title="Cancel">
+                                        <state key="normal" title="Reset">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="cancelTimerButtonTapped:" destination="dyw-uj-bg1" eventType="touchUpInside" id="iWD-sh-aVt"/>
+                                            <action selector="resetTimerButtonTapped:" destination="dyw-uj-bg1" eventType="touchUpInside" id="XaE-yN-WKd"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YGJ-J5-8ht">
@@ -452,13 +452,13 @@
                     </navigationItem>
                     <connections>
                         <outlet property="backButton" destination="v7F-mR-FbF" id="PS3-Ba-dxD"/>
-                        <outlet property="cancelTimerButton" destination="hyf-T8-Mwd" id="znn-SQ-lwQ"/>
                         <outlet property="hoursPicker" destination="RtW-eC-PHo" id="IUd-VI-Lds"/>
                         <outlet property="minutesPicker" destination="1Sc-07-vZT" id="fr3-gn-TLK"/>
                         <outlet property="noSongLabel" destination="SQa-rn-HbY" id="gZT-XI-UyJ"/>
                         <outlet property="noSongSelectedLabel" destination="e4k-y6-8rI" id="vSF-ge-UQr"/>
                         <outlet property="pickersView" destination="9tI-oq-4mf" id="NRI-y1-Sot"/>
                         <outlet property="requestTextView" destination="FVU-Zi-Ttl" id="RdL-0Y-jrq"/>
+                        <outlet property="resetTimerButton" destination="hyf-T8-Mwd" id="wie-h6-UwG"/>
                         <outlet property="secondsPicker" destination="VUk-El-9b2" id="ROf-TE-WPG"/>
                         <outlet property="songArtistLabel" destination="mLv-Fq-LSc" id="H61-0s-EW9"/>
                         <outlet property="songImageView" destination="rsG-Ip-lID" id="Sff-Y0-EP6"/>
