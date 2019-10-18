@@ -65,12 +65,14 @@ class PrayerTimerVC: UIViewController {
     
     func setupViews() {
         songView.isUserInteractionEnabled = true
-        let songTap = UITapGestureRecognizer(target: self, action: #selector(toSongTap(_:)))
-        self.songView.addGestureRecognizer(songTap)
+        let toSongsTap = UITapGestureRecognizer(target: self, action: #selector(toSongsTap(_:)))
+        self.songView.addGestureRecognizer(toSongsTap)
         timeLeftLabel.isHidden = true
         timeLeftLabel.textColor = kMAINCOLOR
         timerButton.backgroundColor = kMAINCOLOR
         requestTextView.isEditable = false
+        let toRequestTap = UITapGestureRecognizer(target: self, action: #selector(toRequestTap(_:)))
+        self.requestTextView.addGestureRecognizer(toRequestTap)
     }
     
     func setupSongView() {
@@ -89,7 +91,11 @@ class PrayerTimerVC: UIViewController {
     }
     
 //MARK: Helpers
-    @objc func toSongTap(_ gesture: UITapGestureRecognizer) {
+    @objc func toSongsTap(_ gesture: UITapGestureRecognizer) {
         navigationController?.popToRootViewController(animated: true)
+    }
+    
+    @objc func toRequestTap(_ gesture: UITapGestureRecognizer) {
+        navigationController?.popViewController(animated: true)
     }
 }
