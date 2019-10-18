@@ -14,7 +14,6 @@ class SongsVC: UIViewController {
     var songs: [Song] = [Song]()
     let cellID: String = "songCellID"
     var isEditingSong: Bool = false
-//    var currentSongId: Int?
     
 //MARK: IBOutlets
     @IBOutlet weak var songsTableView: UITableView!
@@ -25,9 +24,7 @@ class SongsVC: UIViewController {
         super.viewDidLoad()
         doneButton.backgroundColor = kMAINCOLOR
         createDataCell()
-        songsTableView.tableFooterView = UIView() //remove the additional line separator underneath our products
-        
-//        NotificationCenter.default.addObserver(self, selector: #selector(timerTrigger), name: NSNotification.Name(rawValue: "timerStarted"), object: nil) //subscribe to the noticiation
+        songsTableView.tableFooterView = UIView() //remove the additional line separator underneath our
     }
     
 //MARK: Private Methods
@@ -97,7 +94,6 @@ class SongsVC: UIViewController {
                 print(song.songTitle!)
                 if let nav = segue.destination as? UINavigationController,
                     let vc: PrayerRequestVC = nav.topViewController as? PrayerRequestVC {
-//                    vc.song = song //since we are saving song to UserDefaults, we don't need this anymore
                     vc.song = Song.currentSong()
                 }
             } else {
@@ -114,14 +110,6 @@ class SongsVC: UIViewController {
             break
         }
     }
-    
-//    @objc func timerTrigger(_ notification: Notification) {
-//        if let dic = notification.userInfo as? [String: Any] {
-//            let songId = dic[kSONGID] as! String
-//            print("\(songId) is songid")
-//            currentSongId = Int(songId)
-//        }
-//    }
 }
 
 extension SongsVC: UITableViewDelegate, UITableViewDataSource {

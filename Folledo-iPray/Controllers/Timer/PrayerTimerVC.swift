@@ -57,10 +57,6 @@ class PrayerTimerVC: UIViewController {
     
 //MARK: Private Methods
     private func toEditSong() {
-//        navigationController?.popViewController(animated: true)
-//        guard let songId = Song.currentSong()?.songID else { return }
-//        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "timerStarted"), object: nil, userInfo: [kSONGID : songId])
-//        navigationController?.popToRootViewController(animated: true)
         performSegue(withIdentifier: "toSongIdentifier", sender: true)
     }
     
@@ -84,6 +80,7 @@ class PrayerTimerVC: UIViewController {
         timeLeftLabel.isHidden = false
         requestTextView.isUserInteractionEnabled = false
         songView.isUserInteractionEnabled = false
+        noSongLabel.isUserInteractionEnabled = false
         backButton.isEnabled = false
         didStartTimer = true
     }
@@ -96,6 +93,7 @@ class PrayerTimerVC: UIViewController {
         timeLeftLabel.isHidden = true
         requestTextView.isUserInteractionEnabled = true
         songView.isUserInteractionEnabled = true
+        noSongLabel.isUserInteractionEnabled = true
         backButton.isEnabled = true
         didStartTimer = false
     }
