@@ -57,6 +57,7 @@ class PrayerTimerVC: UIViewController {
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidAppear(animated)
         songPlayer?.stop()
+        Song.deleteSong()
     }
     
 //MARK: Navigation
@@ -88,11 +89,12 @@ class PrayerTimerVC: UIViewController {
     }
     
     fileprivate func startTimer() {
-        if !didResumeTimer { //checks if we have started the timer before, if not then add the setTime to seconds
+        if !didResumeTimer { //checks if we have started the timer before, if not then add the setTime to seconds. Meaning this will only be executed the first time
             seconds += setTime.seconds
             seconds += setTime.minutes * 60
             seconds += setTime.hours * 3600
             didResumeTimer = true
+            //******** else statement needs a resume time before playing the song*******
         }
         playSong()
         timeLeftLabel.text = timeString(time: TimeInterval(seconds))
@@ -226,7 +228,7 @@ class PrayerTimerVC: UIViewController {
         if seconds < 1 {
             songPlayer?.stop()
             timeLeftLabel.textColor = .red
-        } else {
+        } else { //run any methods here while timer is going down
 //            seconds -= 1
 //            timeLeftLabel.text = timeString(time: TimeInterval(seconds))
         }
