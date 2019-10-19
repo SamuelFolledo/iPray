@@ -57,7 +57,6 @@ class PrayerTimerVC: UIViewController {
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidAppear(animated)
         songPlayer?.stop()
-        Song.deleteSong()
     }
     
 //MARK: Navigation

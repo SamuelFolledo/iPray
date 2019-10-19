@@ -6,12 +6,19 @@
 //  Copyright © 2019 SamuelFolledo. All rights reserved.
 //
 
-// How to do a certain animation?
+/*
+ ///////QUESTIONS ⁉️❔❓
+ - How to do a certain animation?
+ - How to can a child of a child of a rootVC access rootVC's properties?
+ 
+*/
 
 /*
-//SONGS
+////////SONGS to add 🎶♬🎵♬
  - My soul longs for you
- - not afraid - jesus culture
+ - Not afraid - jesus culture
  
  
+///////IDEAS 💡💡💡
+ - Make an app that scans receiver of mails and packages via iPhone's camera, compare the names to a database of tenant's names that lives in that building, and outputs their room number/ PO box, information or specific notes the receiver wants to display 💡💡💡
  */
