@@ -32,3 +32,5 @@ iPray is a __guided prayer__ iOS app that will help user with their prayer by tr
 - Some VR dude Make School that helped implement properly TimerVC's didResumeTimer property
 
 ### Develop by Samuel P. Folledo during Make School's Fall Intensive INT1.1 from 10/15/2019 - 10/18/2019
+
+License under the [MIT License](LICENSE)
